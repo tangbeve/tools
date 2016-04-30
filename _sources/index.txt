@@ -12,7 +12,7 @@ Development Tools Primer
    devops/index
    doc/index
    iaas/index
-   linux/index
+#   linux/index
    management/index
    python/index
    refcards/index
