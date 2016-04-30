@@ -1,0 +1,1417 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.3. LaTeX &mdash; Cloudmesh Tools Primer 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../index.html"/>
+        <link rel="up" title="4. Docuumentation" href="index.html"/>
+        <link rel="next" title="4.4. pandoc" href="pandoc.html"/>
+        <link rel="prev" title="4.2. Emacs" href="emacs.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Cloudmesh Tools Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../class/index.html">1. Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloudmesh/index.html">2. Cloudmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devops/index.html">3. DevOps</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Docuumentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="acm.html">4.1. Acm Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emacs.html">4.2. Emacs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.3. LaTeX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#short-and-useful-information-about-latex">4.3.1. Short and useful information about LaTeX:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#latex-slides">4.3.1.1. LaTeX Slides**</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#latex-reference-manual">4.3.1.2. LaTeX Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-and-programs">4.3.2. Documentation and Programs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#latex-and-osx">4.3.2.1. LaTeX and OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gregor-s-latex-guide">4.3.3. Gregor&#8217;s LaTeX Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jabref">4.3.3.1. jabref</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#a-sample-latex-session-as-used-in-the-reu-class">4.3.4. A sample LaTeX session as used in the REU class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-to-the-reu-style">4.3.5. Source to the REU style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expanding-your-own-latex-environment">4.3.6. Expanding your own LaTeX environment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pandoc.html">4.4. pandoc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst.html">4.5. RST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx.html">4.6. Sphinx</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../iaas/index.html">5. IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../management/index.html">6. Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/index.html">7. Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refcards/index.html">8. Refcards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">9. Windows</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Cloudmesh Tools Primer</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">4. Docuumentation</a> &raquo;</li>
+      
+    <li>4.3. LaTeX</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/doc/latex.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="latex">
+<h1>4.3. LaTeX<a class="headerlink" href="#latex" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="short-and-useful-information-about-latex">
+<h2>4.3.1. Short and useful information about LaTeX:<a class="headerlink" href="#short-and-useful-information-about-latex" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="latex-slides">
+<h3>4.3.1.1. LaTeX Slides**<a class="headerlink" href="#latex-slides" title="Permalink to this headline">¶</a></h3>
+<p>A short course in LaTeX by Gregor von Laszewski can be found on the NPAC
+ftp server. The document is available in
+<a class="reference external" href="/web/20000817095300/http://www.npac.syr.edu/users/gregor/latex/slides96.dvi">dvi</a>
+and
+<a class="reference external" href="/web/20000817095300/http://www.npac.syr.edu/users/gregor/latex/slides96.ps">postscript</a>
+format. The document is about 40 pages long. A <a class="reference external" href="/web/20000817095300/http://www.npac.syr.edu/users/gregor/latex/slides96.ps.gz">compressed postscript
+file in
+gzip</a>
+format is also available to reduce the download time. The files are also
+available via the <a class="reference external" href="ftp://ftp.npac.syr.edu/pub/users/gregor/latex">anonymous ftp
+site</a></p>
+</div>
+<div class="section" id="latex-reference-manual">
+<h3>4.3.1.2. LaTeX Reference Manual<a class="headerlink" href="#latex-reference-manual" title="Permalink to this headline">¶</a></h3>
+<p>The <a href="#id1"><span class="problematic" id="id2">`</span></a>LaTeX Reference Manual &lt;<a class="reference external" href="http://texdoc.net/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.pdf">http://texdoc.net/texmf-dist/doc/latex/latex2e-help-texinfo/latex2e.pdf</a>&gt;&#8217;__
+provides a good intriduction to Latex.</p>
+</div>
+</div>
+<div class="section" id="documentation-and-programs">
+<h2>4.3.2. Documentation and Programs<a class="headerlink" href="#documentation-and-programs" title="Permalink to this headline">¶</a></h2>
+<p><strong>The LaTeX Navigator</strong></p>
+<p><a class="reference external" href="/web/20000817095300/http://www.loria.fr/tex/english/index.html">The LaTeX Navigator
+(France)</a>
+provides Documentation about macros, packages, formats, tools, TeX
+engines, gives pointers, ... .</p>
+<p><strong>CTAN</strong></p>
+<p>The main <a class="reference external" href="/web/20000817095300/http://www.cdrom.com/pub/tex/ctan/CTAN.sites">TeX and LaTeX
+Archive</a>
+contains almost all information and source codes you need to run and
+install LaTeX. In case a style file is missing on your site, you
+probably find it here.</p>
+<p><strong>TeX and LaTeX index</strong></p>
+<p>The <a class="reference external" href="ftp://theory.lcs.mit.edu//pub/tex/TeX-index">TeX and LaTeX
+Index</a> contains a list
+of many extensions to TeX and LaTeX and a short documents describing
+them.</p>
+<p><strong>LaTeX and Pictures</strong></p>
+<p>Including Pictures in LaTeX is one of the most frequently asked
+questions. Plenty of information about it can be found in the locations
+specified above. I recommend to take a look in the book &#8216;&#8217;The LaTeX
+Companion&#8217;&#8216;. A useful source is also the a little bit outdated
+<a class="reference external" href="ftp://ftp.npac.syr.edu/pub/users/gregor/ftp/LATEX/tr91-003.ps.gz">technical
+report</a>
+from University of Florida.</p>
+<p><strong>Other Documentation</strong></p>
+<p>Other documentation which is locally available can be found on the
+following anonymous ftp site:
+<a class="reference external" href="ftp://ftp.npac.syr.edu/pub/users/gregor/ftp/LATEX">ftp://ftp.npac.syr.edu/pub/users/gregor/ftp/LATEX</a> It includes documents
+which helps for an easy start while using LaTeX. Most of the documents
+are for the older version of LaTeX but still useful.</p>
+<p><strong>LaTeX2e</strong></p>
+<p>The
+<a class="reference external" href="ftp://ftp.npac.syr.edu/pub/users/gregor/ftp/LATEX/LaTeX2e.ps.gz">LaTeX2e</a>
+report provides information about new features and changes to the
+previous LaTeX version 2.09.</p>
+<p><strong>Literate Programming</strong></p>
+<p>I recommend everyone to take a look into <a class="reference external" href="/web/20000817095300/http://info.desy.de/pub/www/projects/LitProg.html">Literate
+Programming</a>.
+It might just change the way how you look at programming in future. In
+the local LaTeX guide I included an elaborate example, which shows how
+to use gnuplot in a LaTeX document.</p>
+<p><strong>Addison Wesley Books</strong></p>
+<p><a class="reference external" href="/web/20000817095300/http://www.germany.eu.net/shop/AW/KE/DT">Addison
+Wesley</a>
+provides online descriptions of books about text processing (LaTeX, TeX,
+...).</p>
+<p><strong>LaTeX Reference Manual</strong></p>
+<p>The official LaTeX Reference Manual can be found at CTAN.</p>
+<p>A very good <a class="reference external" href="/web/20000817095300/http://es-sun2.fernuni-hagen.de/info2html?(latex.info)Top">Reference
+Manual</a>
+is available online from University Hagen in Germany.</p>
+<p><strong>FAQ</strong></p>
+<p>A list of all
+<a class="reference external" href="/web/20000817095300/http://www.cis.ohio-state.edu/hypertext/faq/usenet/fonts-faq/metafont-list/faq.html">fonts</a>
+available in .mf format can help to locate special fonts like hyroglyhs,
+tamil, ...</p>
+<p>There is also a monthly posting of <a class="reference external" href="/web/20000817095300/http://www.cis.ohio-state.edu/hypertext/faq/usenet/tex-faq/faq.html">TeX and LaTeX
+FAQ</a>.
+Please make sure you check those and browse through the information
+provided above before you ask me about a problem.</p>
+<p><strong>LaTeX and MS-Windows</strong></p>
+<p>Recently, I got a lot of questions about LaTeX and Windows 95. It s
+possible to run LaTeX on MS-Windows. The disributions can be found in
+CTAN. The book Making TeX work describes some of the avaialable
+distributions. Currently, the book is sold by O Reiley for $9.95 (this
+is not a printing error).</p>
+<p>On the other hand you can run Linux on most Intel or Dec machines.
+Advantages of using Linux:</p>
+<ul class="simple">
+<li>You are using a real operating system</li>
+<li>You can run many programs from the UNIX world</li>
+<li>You can use xemacs, which colorizes your LaTeX code quite nicely</li>
+<li>It took me over two hours to install Plug and Play Windows95 because
+half of the drivers I needed were not there. So much for plug and
+play. It took me 30 minutes to install Linux including all drivers,
+TeX, LaTeX, xemacs, free C++ compilers, ... .</li>
+<li>Linux is free.</li>
+<li>Linux is much much much faster than the slow slow slow Windows</li>
+</ul>
+<p>Fore those who want to locate information about this in CTAN, please
+look for the following (incomplete list of packages):</p>
+<p>free: emTeX, texas, sbTeX, gTeX</p>
+<p>comercial: muTeX bt ArborText, Y+YTeX, Textures, TurboTeX, PCTeX</p>
+<div class="section" id="latex-and-osx">
+<h3>4.3.2.1. LaTeX and OSX<a class="headerlink" href="#latex-and-osx" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://tug.org/mactex/">https://tug.org/mactex/</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="gregor-s-latex-guide">
+<h2>4.3.3. Gregor&#8217;s LaTeX Guide<a class="headerlink" href="#gregor-s-latex-guide" title="Permalink to this headline">¶</a></h2>
+<p>Mastering a text processing system is an essential part of a
+researchers life. Not knowing how to use a text processing system
+can slow down the productivity of research drastically. In the years
+from 1991 to 1996 I gave about 9 seminar talks about LaTeXSyracuse
+University and NPAC. During this time I was confronted with many
+questions of beginners in LaTeX. In order to provide a quick guide
+to LaTeX I designed this page. If you have comments and suggestions
+on how to improve this page, please let me know.</p>
+<p>This page is not intended to replace one of the many text books
+available about LaTeX. For the beginning you might be just fine with
+the documentation provided here. For serious users I recommend to
+purchase a book. I do not want to give a recommendation for one or
+the other book, therefore I list here only the most popular ones:</p>
+<ul class="simple">
+<li>LaTeX Users and Reference Guide, by Leslie Lamport</li>
+<li>LaTeX an Introduction, by Helmut Kopka</li>
+<li>The LaTeX Companion, by Frank Mittelbach</li>
+</ul>
+<p>If you buy books for LaTeX you should be aware that a new version is
+released. Unfortunately it is not yet officially installed on our
+systems. The current version is LaTeX2e and you should see if this
+version is covered in the book, if not do not buy the book.</p>
+<p>Nevertheless, most of the old LaTeX files can be formatted with the
+new version. Therefore, you do not have to through your old LaTeX
+books away. The LaTeX Companion gives hints how to use some very
+useful extension programs.</p>
+<p>If you do not want to buy a book you can find a lot of useful
+information in the Slides I prepared for an introductory LaTeX
+<a class="reference external" href="slides96.ps">seminar</a>. In the slides you will find examples of
+how to include graphics into your document.</p>
+<p>More elaborate examples for including graphics in documents are
+given in a technical
+<a class="reference external" href="ftp://ftp.npac.syr.edu/pub/users/gregor/ftp/LATEX/tr91-003.ps.gz">report</a>
+by the Florida State University. Note that this report reflects the
+old LaTeX.</p>
+<p>Since LaTeX is such a powerful Text Processing system a lot of
+literature and programs are existing for it. Once you become more
+familiar with LaTeX you might want to customize it and extend it for
+your own needs. You will find many useful extensions in the CTAN
+Archive. I recommend to browse around and to see what is available.</p>
+<p>You have to make the decision if you want to use the LaTeX version
+2.09 or 2e, which is the new standard. I recommend to switch to 2e
+as soon as possible, because more programs are supported in the new
+version. For LaTeX2e you can also find a template for writing NPAC
+technical reports in /home/T10D/latex/DIST/contrib.</p>
+<p>LaTeX is installed and maintained by systems on the SUN
+workstations. Please run it if possible on your own workstation and
+not on one of the file servers.</p>
+<p>To make LaTeX run you should include the Following variables in your
+environment in the .cshrc file.</p>
+<ul>
+<li><p class="first">the environment variable PATH should contain /usr/local/bin</p>
+</li>
+<li><dl class="first docutils">
+<dt>setenv TEXEDIT ``emacs +%d %s&#8217;&#8216;</dt>
+<dd><p class="first last"><a href="#id3"><span class="problematic" id="id4">*</span></a>to set the default editor if an error occurs and you want to</p>
+</dd>
+</dl>
+<p>edit it.*</p>
+</li>
+<li><p class="first">setenv TEXINPUTS
+.:HOME/fonts:/HOME/tex/fonts:/usr/local/lib/tex/fonts</p>
+<blockquote>
+<div><p><em>to set if you have special fonts not provided by systems.</em></p>
+</div></blockquote>
+</li>
+</ul>
+<p>Before you place them in your environment, please check if they do
+not already exists. Do this by typing env or printenv. In general
+systems has set up your environment in such a way that you don&#8217;t
+have to include them in your .cshrc file. Read the manual pages to
+latex and tex to find out more about these shell variables.</p>
+<p>To install LaTex2e in your environment you have to include the
+following lines in your .cshrc file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>########### LATEX installation in .cshrc file #####
+#
+setenv LATEX /home/T10D/latex/DIST
+setenv TEXINPUTS .:$LATEX/inputs:$LATEX/contrib:$HOME/tex:/usr/local/lib/tex/inputs
+setenv TEXFORMATS $LATEX/formats
+#
+###################################################
+</pre></div>
+</div>
+<p>Following programs are useful for using LaTeX. To most of them you
+will find also manual pages:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="65%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>latex</td>
+<td>the latex program</td>
+</tr>
+<tr class="row-even"><td>xdvi</td>
+<td>to preview translated documents</td>
+</tr>
+<tr class="row-odd"><td>dvips</td>
+<td>to convert documents to postscript</td>
+</tr>
+<tr class="row-even"><td>lpr</td>
+<td>to print postscript documents</td>
+</tr>
+<tr class="row-odd"><td>ghostview</td>
+<td>to view the postscript documents</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="/web/20000817095300/http://www.cs.wisc.edu/ghost">gs</a></td>
+<td>a simple postscript viewer,</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li>`` -</li>
+</ul>
+</td>
+<td>sometimes ghostview fails</td>
+</tr>
+<tr class="row-even"><td>bibtex</td>
+<td>to create bibliographies</td>
+</tr>
+<tr class="row-odd"><td>bibcard</td>
+<td>very fancy GUI to bibtex files</td>
+</tr>
+<tr class="row-even"><td>xbibtex</td>
+<td>less fancy GUI to bibtex files</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="ftp://ftp.cs.ubc.ca/ftp/archive/netpbm">netpbm</a></td>
+<td>image conversion toolkit</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="/web/20000817095300/http://www.cs.dartmouth.edu/gnuplot_info.html">gnuplot</a></td>
+<td>two dimensional interactiv drawing program</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="ftp://ftp.x.org/contrib/applications/drawing_tools/xfig">xgraph</a></td>
+<td>another two dimensional interactiv drawing program</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="/web/20000817095300/http://hal6000.thp.uni-duisburg.de/doc/xmgr_doc/ACEgr.html">xvgr, xmgr</a></td>
+<td>two dimensional interactiv drawing program</td>
+</tr>
+</tbody>
+</table>
+<p>If you can not find a program, you might want to look in the
+directory</p>
+<ul class="simple">
+<li><em>/home/T10D/latex/bin</em></li>
+</ul>
+<p>Note: you will not be able to run /home/T10D/latex/bin/xdvi. Use the
+original version in /usr/local/X11/bin/xdvi instead.</p>
+<p>Note: All programs are only compiled for Sun4.</p>
+<ol class="arabic simple">
+<li>emacs fname.tex <em>Create/edit ASCII source file with .tex file
+extension</em></li>
+<li>bibcard refs.bib <em>If necessary, create/edit bibliography file
+with .bib file extension</em></li>
+<li>latex fname <em>Run LaTeX</em></li>
+<li><em>Correct syntax errors if present (goto step 1)</em></li>
+<li>bibtex fname <em>If necessary, run BibTeX</em></li>
+<li><em>Rerun LaTeX if necessary (goto step 3)</em></li>
+<li>xdvi fname <em>View document</em></li>
+<li>dvips -o fname.ps fname <em>Create postscript file</em></li>
+<li>lpr fname.ps <em>Print postscript file</em></li>
+</ol>
+<p>The program latex2html provides a simple method of converting LaTeX
+documents into HTML format. Currently it is available on different
+machines under the name latex2html. The current verssion is 96.1 and
+allows the inclusion of tables and equations (HTML 3.1).</p>
+<p>You can find the program in <em>/usr/npac/lib/latex2html-96.1</em>.</p>
+<p>In order to run latex2html proerly you must include <em>/usr/local/bin</em>
+and <em>/usr/npac/bin/netpbm</em> in your PATH variable. Because latex2html
+is designed for LaTeX2e I recommend to update your environment as
+described previously.</p>
+<p>The official distribution can be found at
+<a class="reference external" href="/web/20000817095300/http://cbl.leeds.ac.uk/nikos/tex2html">http://cbl.leeds.ac.uk/nikos/tex2html</a>.
+A postscript version of the documentattion is stored in
+<em>/usr/npac/lib/latex2html/docs</em>.</p>
+<p>The generation of tables in html2latex is still a little bit
+problemantic. if you put an hline command in the table all fields
+will be outlined. Furthermore empty fields should include a <code class="docutils literal"><span class="pre">~</span></code> so
+that they are treated as fields with an entry. Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="n">lcccc</span><span class="p">}</span>
+    <span class="n">Machine</span> <span class="o">&amp;</span> <span class="n">gcc</span> <span class="o">&amp;</span> <span class="n">blas</span> <span class="o">&amp;</span> <span class="n">emssl</span> <span class="o">&amp;</span> <span class="n">dxml</span> \\
+    \<span class="n">hline</span>
+    <span class="n">SUN</span> <span class="n">SPARC</span> <span class="o">&amp;</span> <span class="n">X</span> <span class="o">&amp;</span> <span class="n">X</span> <span class="o">&amp;</span> <span class="o">~</span> <span class="o">&amp;</span> <span class="o">~</span>\\
+    <span class="n">RS6000</span>    <span class="o">&amp;</span> <span class="n">X</span> <span class="o">&amp;</span> <span class="n">X</span> <span class="o">&amp;</span> <span class="n">X</span> <span class="o">&amp;</span> <span class="o">~</span>\\
+    <span class="n">DEC</span> <span class="n">ALPHA</span> <span class="o">&amp;</span> <span class="n">X</span> <span class="o">&amp;</span> <span class="o">~</span> <span class="o">&amp;</span> <span class="o">~</span> <span class="o">&amp;</span> <span class="n">X</span>\\
+    \<span class="n">hline</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>If you want to install latex2html on another system you need to
+install netpbm, gnu gs-2.6.2 or better, nad the latex2html program.</p>
+<p>The installtion is relatively easy. and the program install-test in
+the latex2html directory helps to locate the necessary programs.</p>
+<p>Ghostscript has to be installed properly on your system. If it is
+not placed under /usr/local, one has to modify the appropiate e.g.,
+cc-head.mak file (for a SUN) in the distibution. Be sure to update
+the PREFIX and the BINDIR directory appropiatly. The fonts are
+usually stored in (PREFIX)/lib/ghostscript. Thus you should copy the
+desired fonts in this directory.</p>
+<p>In addition you need the newest version of the netpbm programs which
+are used by latex2html to convert postscript to GIF. Netpbm is a
+toolkit for conversion of images between a variety of different
+formats, as well as to allow a few basic image operations. The
+package is portable to many platforms. Netpbm is based on the widely
+spread Pbmplus package with many improvements.</p>
+<p>The packages can be found, for example, at</p>
+<p><strong>latex2html</strong></p>
+<p><a class="reference external" href="/web/20000817095300/http://cbl.leeds.ac.uk/nikos/tex2html">http://cbl.leeds.ac.uk/nikos/tex2html</a></p>
+<p><strong>ghostscript</strong></p>
+<p><cite>http://www.cs.wisc.edu/``~`</cite>ghost &lt;/web/20000817095300/<a class="reference external" href="http://www.cs.wisc.edu/%20ghost">http://www.cs.wisc.edu/%20ghost</a>&gt;`__</p>
+<p><strong>netpbm</strong></p>
+<p><a class="reference external" href="ftp://ftp.cs.ubc.ca/ftp/archive/netpbm">ftp://ftp.cs.ubc.ca/ftp/archive/netpbm</a></p>
+<p>Since there might be the need to convert certain other graphics format
+to postscript to include them in a LaTeX document a list of available
+programs from the netpbm package are give. The programs can be used with
+pipes in order to create a valid conversion path to postscript. Many
+options are available. It is referred to the manual pages in order to
+find out more details.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert to portable bitmap from</td>
+</tr>
+<tr class="row-even"><td>atktopbm</td>
+<td>Andrew Toolkit raster object</td>
+</tr>
+<tr class="row-odd"><td>brushtopbm</td>
+<td>Xerox doodle brushes</td>
+</tr>
+<tr class="row-even"><td>cmuwmtopbm</td>
+<td>CMU window manager format</td>
+</tr>
+<tr class="row-odd"><td>g3topbm</td>
+<td>Group 3 FAX</td>
+</tr>
+<tr class="row-even"><td>icontopbm</td>
+<td>Sun icon</td>
+</tr>
+<tr class="row-odd"><td>gemtopbm</td>
+<td>GEM .img format</td>
+</tr>
+<tr class="row-even"><td>macptopbm</td>
+<td>MacPaint</td>
+</tr>
+<tr class="row-odd"><td>mgrtopbm</td>
+<td>MGR format</td>
+</tr>
+<tr class="row-even"><td>pi3topbm</td>
+<td>Atari Degas .pi3</td>
+</tr>
+<tr class="row-odd"><td>xbmtopbm</td>
+<td>X10 or X11 bitmap</td>
+</tr>
+<tr class="row-even"><td>ybmtopbm</td>
+<td>Bennet Yee &#8220;face&#8221; file in</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert from portable bitmap to</td>
+</tr>
+<tr class="row-even"><td>pbmto10x</td>
+<td>Gemini 10x printer graphics</td>
+</tr>
+<tr class="row-odd"><td>pbmtoascii</td>
+<td>ASCII graphic form</td>
+</tr>
+<tr class="row-even"><td>pbmtoatk</td>
+<td>Andrew Toolkit raster object</td>
+</tr>
+<tr class="row-odd"><td>pbmtobbnbg</td>
+<td>BBN BitGraph graphics</td>
+</tr>
+<tr class="row-even"><td>pbmtocmuwm</td>
+<td>CMU window manager format</td>
+</tr>
+<tr class="row-odd"><td>pbmtoepson</td>
+<td>Epson printer graphics</td>
+</tr>
+<tr class="row-even"><td>pbmtog3</td>
+<td>Group 3 FAX</td>
+</tr>
+<tr class="row-odd"><td>pbmtogem</td>
+<td>GEM .img file</td>
+</tr>
+<tr class="row-even"><td>pbmtogo</td>
+<td>GraphOn graphics</td>
+</tr>
+<tr class="row-odd"><td>pbmtoicon</td>
+<td>Sun icon</td>
+</tr>
+<tr class="row-even"><td>pbmtolj</td>
+<td>HP LaserJet graphics</td>
+</tr>
+<tr class="row-odd"><td>pbmtomacp</td>
+<td>MacPaint</td>
+</tr>
+<tr class="row-even"><td>pbmtomgr</td>
+<td>MGR format</td>
+</tr>
+<tr class="row-odd"><td>pbmtopi3</td>
+<td>Atari Degas .pi3</td>
+</tr>
+<tr class="row-even"><td>pbmtoplot</td>
+<td>Unix plot(5) file</td>
+</tr>
+<tr class="row-odd"><td>pbmtoptx</td>
+<td>Printronix graphics</td>
+</tr>
+<tr class="row-even"><td>pbmtoxbm</td>
+<td>X11 bitmap</td>
+</tr>
+<tr class="row-odd"><td>pbmtox10bm</td>
+<td>X10 bitmap</td>
+</tr>
+<tr class="row-even"><td>pbmtoybm</td>
+<td>Bennet Yee &#8220;face&#8221; file</td>
+</tr>
+<tr class="row-odd"><td>pbmtozinc</td>
+<td>Zinc Interface Library icon</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert to portable to graymap from</td>
+</tr>
+<tr class="row-even"><td>fitstopgm</td>
+<td>FITS format to portable graymap</td>
+</tr>
+<tr class="row-odd"><td>fstopgm</td>
+<td>Usenix FaceSaver(tm) format</td>
+</tr>
+<tr class="row-even"><td>hipstopgm</td>
+<td>HIPS format</td>
+</tr>
+<tr class="row-odd"><td>lispmtopgm</td>
+<td>a Lisp Machine bitmap file</td>
+</tr>
+<tr class="row-even"><td>psidtopgm</td>
+<td>PostScript &#8220;image&#8221; data</td>
+</tr>
+<tr class="row-odd"><td>rawtopgm</td>
+<td>raw grayscale bytes</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert portable graymap to</td>
+</tr>
+<tr class="row-even"><td>pgmtofits</td>
+<td>FITS format</td>
+</tr>
+<tr class="row-odd"><td>pgmtofs</td>
+<td>Usenix FaceSaver(tm) format</td>
+</tr>
+<tr class="row-even"><td>pgmtolispm</td>
+<td>into Lisp Machine format</td>
+</tr>
+<tr class="row-odd"><td>pgmtopbm</td>
+<td>portable bitmap</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert to portable pixmap from</td>
+</tr>
+<tr class="row-even"><td>giftoppm</td>
+<td>GIF</td>
+</tr>
+<tr class="row-odd"><td>gouldtoppm</td>
+<td>Gould scanner file</td>
+</tr>
+<tr class="row-even"><td>ilbmtoppm</td>
+<td>IFF ILBM</td>
+</tr>
+<tr class="row-odd"><td>imgtoppm</td>
+<td>Img-whatnot</td>
+</tr>
+<tr class="row-even"><td>mtvtoppm</td>
+<td>MTV ray-tracer output</td>
+</tr>
+<tr class="row-odd"><td>pcxtoppm</td>
+<td>PC Paintbrush format</td>
+</tr>
+<tr class="row-even"><td>pi1toppm</td>
+<td>Atari Degas .pi1</td>
+</tr>
+<tr class="row-odd"><td>picttoppm</td>
+<td>Macintosh PICT</td>
+</tr>
+<tr class="row-even"><td>pjtoppm</td>
+<td>HP PaintJet file</td>
+</tr>
+<tr class="row-odd"><td>qrttoppm</td>
+<td>QRT ray-tracer output</td>
+</tr>
+<tr class="row-even"><td>rawtoppm</td>
+<td>raw RGB bytes</td>
+</tr>
+<tr class="row-odd"><td>sldtoppm</td>
+<td>an AutoCAD slide file</td>
+</tr>
+<tr class="row-even"><td>spctoppm</td>
+<td>Atari compressed Spectrum</td>
+</tr>
+<tr class="row-odd"><td>sputoppm</td>
+<td>Atari uncompressed Spectrum</td>
+</tr>
+<tr class="row-even"><td>tgatoppm</td>
+<td>TrueVision Targa file</td>
+</tr>
+<tr class="row-odd"><td>ximtoppm</td>
+<td>Xim</td>
+</tr>
+<tr class="row-even"><td>xpmtoppm</td>
+<td>XPM format</td>
+</tr>
+<tr class="row-odd"><td>yuvtoppm</td>
+<td>Abekas YUV format</td>
+</tr>
+<tr class="row-even"><td>rgb3toppm</td>
+<td>combine three portable graymaps</td>
+</tr>
+<tr class="row-odd"><td>pgmtoppm</td>
+<td>colorize a portable graymap</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert from portable pixmap</td>
+</tr>
+<tr class="row-even"><td>ppmtoacad</td>
+<td>AutoCAD database or slide</td>
+</tr>
+<tr class="row-odd"><td>ppmtogif</td>
+<td>GIF</td>
+</tr>
+<tr class="row-even"><td>ppmtoicr</td>
+<td>NCSA ICR graphics</td>
+</tr>
+<tr class="row-odd"><td>ppmtoilbm</td>
+<td>IFF ILBM</td>
+</tr>
+<tr class="row-even"><td>ppmtopcx</td>
+<td>PC Paintbrush format</td>
+</tr>
+<tr class="row-odd"><td>ppmtopgm</td>
+<td>portable graymap</td>
+</tr>
+<tr class="row-even"><td>ppmtopi1</td>
+<td>Atari Degas .pi1</td>
+</tr>
+<tr class="row-odd"><td>ppmtopict</td>
+<td>Macintosh PICT</td>
+</tr>
+<tr class="row-even"><td>ppmtopj</td>
+<td>HP PaintJet file</td>
+</tr>
+<tr class="row-odd"><td>ppmtopuzz</td>
+<td>X11 &#8220;puzzle&#8221; file</td>
+</tr>
+<tr class="row-even"><td>ppmtosixel</td>
+<td>DEC sixel format</td>
+</tr>
+<tr class="row-odd"><td>ppmtotga</td>
+<td>TrueVision Targa file</td>
+</tr>
+<tr class="row-even"><td>ppmtouil</td>
+<td>Motif UIL icon file</td>
+</tr>
+<tr class="row-odd"><td>ppmtoxpm</td>
+<td>XPM format</td>
+</tr>
+<tr class="row-even"><td>ppmtoyuv</td>
+<td>Abekas YUV format</td>
+</tr>
+<tr class="row-odd"><td>ppmtorgb3</td>
+<td>separate a portable pixmap into three portable graymaps</td>
+</tr>
+</tbody>
+</table>
+<p>convert raster formats</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>rasttopnm</td>
+<td>convert Sun raster file to portable anymap</td>
+</tr>
+<tr class="row-even"><td>tifftopnm</td>
+<td>convert TIFF file to portable anymap</td>
+</tr>
+<tr class="row-odd"><td>xwdtopnm</td>
+<td>convert X10 or X11 window dump to portable anymap</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&nbsp;</td>
+<td>convert portable anymap to</td>
+</tr>
+<tr class="row-even"><td>pnmtops</td>
+<td>PostScript</td>
+</tr>
+<tr class="row-odd"><td>pnmtorast</td>
+<td>Sun raster file</td>
+</tr>
+<tr class="row-even"><td>pnmtotiff</td>
+<td>TIFF file</td>
+</tr>
+<tr class="row-odd"><td>pnmtoxwd</td>
+<td>X11 window dump</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see from the list of programs provided by netpbm you can
+translate many different formats to Postscript. This includes also
+Macintosh specific formats.</p>
+<p>Sometimes it is a problem to print and use Postscript pictures which
+are generated on a MacIntosh. This is due to the fact that during
+printing several MacIntosh specific files have to be downloaded to
+the printer first, before the actual file is printed.</p>
+<p>In most cases these files will not be on your system, thus printing
+is not possible.</p>
+<p>Certain graphics program also do not define bounding boxes so that
+the inclusion n Latex is not possible either. (see bbfig, note done
+yet).</p>
+<p>If you do not have netpbm you might be able to translate the
+graphics also with the help of <em>xv</em>. The following steps describe
+the translation:</p>
+<ol class="arabic simple">
+<li>Save the Macintosh graphic in TIFF, JPEG, or GIF file format.</li>
+<li>FTP the file to a UNIX machine where xv is installed. This can be
+checked via <em>which xv</em> on the UNIX machine. Use ASCII mode
+transfer.</li>
+<li>Open an X11-window start the program <em>xv</em></li>
+<li>Load the TIFF, JPEG, or GIF file into xv, via the &#8220;Load&#8221; menu
+item.</li>
+<li>Under xv&#8217;s &#8220;Save&#8221; menu, chose the Postscript file format and save
+the file as fname.ps.</li>
+<li>Activate the preview and the compress option.</li>
+<li>Choose the proper layout and size.</li>
+<li>The file fname.ps can be included in a latex file using the
+&#8220;psfig&#8221; latex environment.</li>
+</ol>
+<p>Today it is important that we increase our awareness for natural
+resources. One of the issues is to reduce the amount of paper we use
+for printing programs and Documentation. Often it is only necessary
+to read manuals or manual pages online. I encourage everyone to
+avoid printing. Instead design your own HTML page and include the
+links to your favorite manuals in it. This way you can easily go
+back and look up what you want to know.</p>
+<p>If you have LaTeX documents I encourage to use</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">documentclass</span><span class="p">[</span><span class="n">twocolumn</span><span class="p">]{</span><span class="n">article</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>which will print your document in two columns. My preferred way of
+saving paper is the 2up.sty.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">documentclass</span><span class="p">[</span><span class="mi">2</span><span class="n">up</span><span class="p">]{</span><span class="n">article</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>which reduces automatically your font and prints two pages on one
+page instead. To print documents in 2up mode use the command</p>
+<blockquote>
+<div><em>/usr/home/T10D/latex/bin/lptex dvifilename 2</em></div></blockquote>
+<p>The 2 at the end indicates that 2 pages are printed in rotate
+fashion on one page. To print selected pages use the command &lt;p&gt;</p>
+<blockquote>
+<div><em>lpside2 dviname 3 6 7</em></div></blockquote>
+<p>Which would print the pages 3,6, and 7 of the dvifile <em>dviname</em>.
+Note: It would print page 5,6 (3), 11,12 (6) and 13,14 (7) of the
+real page numbers in the document. &lt;p&gt;</p>
+<p>For pages in non 2up mode you have the same commands. &lt;p&gt;</p>
+<blockquote>
+<div><p><em>lpside dviname 1 3 9 -&gt; prints pages 1, 3, and 9</em></p>
+<p><em>lprange dviname 1 6 -&gt; prints pages 1 2 3 4 5 6</em></p>
+<p><em>lptex dviname -&gt; prints the whole document</em></p>
+</div></blockquote>
+<p>So print only the pages, you know you have changed, rather than the
+whole document.</p>
+<p>The text editor emacs provides a good basis for editing TeX and
+LaTex documents. Both modes are supported. In addition there exists
+a color highlight module enableling the color display of LaTeX and
+TeX commands.</p>
+<p>In order to make use of this facilities one should edit the file
+<em>``~``/.emacs</em>. Include the following lines in this file, but be
+careful that you do not introduce any side effects with other
+commands already used in this file. For more information I recommend
+the manual.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">cond</span> <span class="p">(</span><span class="n">window</span><span class="o">-</span><span class="n">system</span>
+  <span class="p">(</span><span class="n">setq</span> <span class="n">hilit</span><span class="o">-</span><span class="n">mode</span><span class="o">-</span><span class="n">enable</span><span class="o">-</span><span class="nb">list</span>  <span class="s1">&#39;(not text-mode)</span>
+        <span class="n">hilit</span><span class="o">-</span><span class="n">background</span><span class="o">-</span><span class="n">mode</span>   <span class="s1">&#39;light</span>
+              <span class="n">hilit</span><span class="o">-</span><span class="n">inhibit</span><span class="o">-</span><span class="n">hooks</span>     <span class="n">nil</span>
+              <span class="n">hilit</span><span class="o">-</span><span class="n">inhibit</span><span class="o">-</span><span class="n">rebinding</span> <span class="n">nil</span><span class="p">)</span>
+
+        <span class="p">(</span><span class="n">require</span> <span class="s1">&#39;hilit19)</span>
+        <span class="p">))</span>
+
+<span class="p">(</span><span class="n">hilit</span><span class="o">-</span><span class="n">translate</span> <span class="nb">type</span>     <span class="s1">&#39;RoyalBlue   ; enable highlighting in C/C++</span>
+                 <span class="n">define</span>   <span class="s1">&#39;RoyalBlue   ; enable highlighting in C/C++</span>
+                 <span class="n">comment</span>  <span class="s1">&#39;Red         ; enable highlighting in C/C++</span>
+                 <span class="n">decl</span>     <span class="s1">&#39;green       ; enable highlighting in C/C++</span>
+                 <span class="n">include</span>  <span class="s1">&#39;Purple      ; enable highlighting in C/C++</span>
+                 <span class="n">string</span>   <span class="n">nil</span><span class="p">)</span>         <span class="p">;</span> <span class="n">disable</span> <span class="n">string</span> <span class="n">highlighting</span>
+
+<span class="p">(</span><span class="k">global</span><span class="o">-</span><span class="nb">set</span><span class="o">-</span><span class="n">key</span> <span class="s2">&quot;\eg&quot;</span> <span class="s1">&#39;goto-line) ;; put goto-line on ESC g</span>
+<span class="p">(</span><span class="n">setq</span> <span class="n">auto</span><span class="o">-</span><span class="n">mode</span><span class="o">-</span><span class="n">alist</span>
+      <span class="p">(</span><span class="n">append</span> <span class="s1">&#39;((&quot;</span><span class="se">\\</span><span class="s1">.csh$&quot;.csh-mode)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.sh$&quot;</span><span class="o">.</span><span class="n">sh</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.C$&quot;</span><span class="o">.</span><span class="n">c</span><span class="o">++-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.cc$&quot;</span><span class="o">.</span><span class="n">c</span><span class="o">++-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.f9$&quot;</span><span class="o">.</span><span class="n">fortran</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.f90$&quot;</span><span class="o">.</span><span class="n">fortran</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.F$&quot;</span><span class="o">.</span><span class="n">fortran</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.tex$&quot;</span><span class="o">.</span><span class="n">latex</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.w$&quot;</span><span class="o">.</span><span class="n">latex</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.inc$&quot;</span><span class="o">.</span><span class="n">fortran</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.e?ps$&quot;</span><span class="o">.</span><span class="n">postscript</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">;;(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">.bib$&quot;</span><span class="o">.</span><span class="n">bibtex</span><span class="o">-</span><span class="n">mode</span><span class="p">)</span>
+                <span class="p">)</span>
+              <span class="n">auto</span><span class="o">-</span><span class="n">mode</span><span class="o">-</span><span class="n">alist</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Other extensions and packages for TeX include AUC Tex. AUC TeX is an
+extensible package that supports writing and formatting TeX files
+for most variants of GNU Emacs. Many different macro packages are
+supported, including AMS TeX, LaTeX, and TeXinfo. AUC TeX is
+available from
+<a class="reference external" href="/web/20000817095300/http://sunsite.auc.dk/auctex">http://sunsite.auc.dk/auctex</a>.</p>
+<p>To spell check a LaTeX document I recommend ispell. Ispell is spell
+checker in C with interface available for Emacs. It can adapt
+different dictionaries from several languages. Thus you can spell
+check German, British English, or American English. The dictionaries
+and their source can be found at</p>
+<p><a class="reference external" href="ftp://ftp.th-darmstadt.de/pub/dicts/ispell/">ftp://ftp.th-darmstadt.de/pub/dicts/ispell/</a></p>
+<p>It is a waste of your time to edit bibliographies with the bibitem
+environment. There are several preformated styles available. It
+includes also styles for ACM and IEEE bibliographies. So there is no
+need for you to reformat the entries with brackets, capital letters
+and other things.</p>
+<p>First you have to declare a reference database. This can be done in
+2 ways. Either use emacs and change to the bibtex-mode (ESC-x
+bibtex-mode). This will change your emacs window and add menus to
+the window. They are self explanatory so it is real easy to use.</p>
+<p>An even more simpler program is bibcard or bibview which allows the
+access to a bibliography data base with the help of a fancy
+graphical user interface. The only thing you have to do after
+specifying the entries is to save the file and add at the end of
+your program the following lines</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>\<span class="n">bibliographystyle</span><span class="p">{</span><span class="n">plain</span><span class="p">}</span>
+\<span class="n">bibliography</span><span class="p">{</span><span class="n">references</span><span class="o">.</span><span class="n">bib</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Than you have to run latex and bibtex in the following order:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">latex</span>  <span class="n">file</span>
+<span class="n">bibtex</span> <span class="n">file</span>
+<span class="n">latex</span>  <span class="n">file</span>
+<span class="n">latex</span>  <span class="n">file</span>
+</pre></div>
+</div>
+<p>The reason for the multiple execution of the latex program is to
+update all crossreferences correctly. In case you are not interested
+in updating the library every time in the writing progress just
+postpone it till the end. Missing citations are viewed as [?].</p>
+<p>Additional programs for bibliography databases are available from
+the net. I recommend bib2dvi which generates a dvi file out of a
+whole database. But often it will be sufficient to use bibcard
+online. to search for the appropriate citation key.</p>
+<div class="section" id="jabref">
+<h3>4.3.3.1. jabref<a class="headerlink" href="#jabref" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.jabref.org/">http://www.jabref.org/</a></li>
+</ul>
+<div class="section" id="how-do-i-produce-slides">
+<h4>4.3.3.1.1. How do I produce Slides?<a class="headerlink" href="#how-do-i-produce-slides" title="Permalink to this headline">¶</a></h4>
+<p>Do not use the slides package use the seminar package.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>\<span class="n">documentclass</span><span class="p">{</span><span class="n">seminar</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">slide</span><span class="p">}</span>
+
+<span class="n">Hello</span> <span class="n">World</span> <span class="n">on</span> <span class="n">slide</span> <span class="mi">1</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">slide</span><span class="p">}</span>
+
+<span class="n">The</span> <span class="n">text</span> <span class="n">between</span> <span class="n">slides</span> <span class="ow">is</span> <span class="n">ignored</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">slide</span><span class="p">}</span>
+
+<span class="n">Hello</span> <span class="n">World</span> <span class="n">on</span> <span class="n">slide</span> <span class="mi">2</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">slide</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-create-2d-plots">
+<h4>4.3.3.1.2. How to create 2d plots<a class="headerlink" href="#how-to-create-2d-plots" title="Permalink to this headline">¶</a></h4>
+<p>To create 2 dimensional graphics to include into LaTeX many programs
+are available. My favorite ones are</p>
+<ol class="arabic">
+<li><p class="first">ipl</p>
+</li>
+<li><p class="first">xvgr or xmgr</p>
+</li>
+<li><p class="first">gnuplot</p>
+<p>Other programs exist to, you might want to check out xgraph,
+matlab and mathematica. I prefer the ones above, because they are
+free and provide me with the necessary features. ipl provides
+box-whisker programs and can be found in comp.sources. It is for
+SUNS, but I modified it to provide a port for LINUX.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="how-to-create-diagrams">
+<h4>4.3.3.1.3. How to create Diagrams<a class="headerlink" href="#how-to-create-diagrams" title="Permalink to this headline">¶</a></h4>
+<p>As with 2d-ploting programs many graph drawing programs exist. One
+key feature such a program should have is to group object together.</p>
+<p><strong>idraw</strong></p>
+<p>My favorite program used to be idraw, but currently I still look for
+a port to LINUX under ELF. Idraw will run on most workstations
+including RS6000 and SUN workstations, because it is part of the
+interviews package from Stanford university.</p>
+<p><strong>xfig</strong></p>
+<p>One of the most used programs is
+<a class="reference external" href="ftp://ftp.x.org/contrib/applications/drawing_tools/xfig/xfig.3.1.3.tar.gz">xfig</a>.
+Unfortunately, I find it a little bit to complicated, and I decided
+not to use it.</p>
+<p><strong>tgif</strong></p>
+<p>Instead I recommend the program
+<a class="reference external" href="/web/20000817095300/http://bourbon.cs.ucla.edu:8001/tgif">tgif</a>,
+which combines many good features from xfig and idraw. It alows
+inclusion of GIFs and bitmaps and provides the usual drawing
+functions known from idraw and xfig.</p>
+<p>It can generate color encapsulated postscript which you can include
+with the figure environment into LaTeX. The program runs on
+basically every workstation including LINUX ELF.</p>
+</div>
+<div class="section" id="how-do-i-produce-self-extracting-graphics-for-latex">
+<h4>4.3.3.1.4. How do I produce self extracting graphics for LaTeX<a class="headerlink" href="#how-do-i-produce-self-extracting-graphics-for-latex" title="Permalink to this headline">¶</a></h4>
+<p>Check out the following software engineering master piece ;-)</p>
+<p>File: timings.w</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@O</span> <span class="n">Makefile</span> <span class="o">-</span><span class="n">t</span> <span class="o">@</span><span class="p">{</span>
+<span class="nb">all</span><span class="p">:</span>
+    <span class="n">nuweb</span> <span class="n">timings</span><span class="o">.</span><span class="n">w</span>
+    <span class="n">gnuplot</span> <span class="n">graph</span><span class="o">.</span><span class="n">eps</span>
+    <span class="n">latex</span> <span class="n">timings</span><span class="o">.</span><span class="n">tex</span>
+
+<span class="n">clean</span><span class="p">:</span>
+    <span class="o">-</span><span class="n">rm</span> <span class="o">*.</span><span class="n">aux</span> <span class="o">*.</span><span class="n">log</span> <span class="o">*~</span> <span class="o">*.</span><span class="n">dvi</span>
+    <span class="o">-</span><span class="n">rm</span> <span class="n">timings</span><span class="o">.</span><span class="n">tex</span>
+    <span class="o">-</span><span class="n">rm</span> <span class="n">graph</span><span class="o">.</span><span class="n">eps</span> <span class="n">graph</span><span class="o">.</span><span class="n">dat</span> <span class="n">graph</span><span class="o">.</span><span class="n">ps</span>
+<span class="o">@</span><span class="p">}</span>
+
+
+<span class="nd">@O</span> <span class="n">graph</span><span class="o">.</span><span class="n">eps</span> <span class="o">@</span><span class="p">{</span>
+<span class="nb">set</span> <span class="n">output</span>   <span class="s2">&quot;graph.ps&quot;</span>
+
+<span class="nb">set</span> <span class="n">terminal</span> <span class="n">postscript</span> <span class="n">portrait</span> <span class="s2">&quot;Helvetica&quot;</span> <span class="mi">7</span>
+<span class="nb">set</span> <span class="n">size</span> <span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span>
+
+<span class="nb">set</span> <span class="n">noxzeroaxis</span>
+<span class="nb">set</span> <span class="n">noyzeroaxis</span>
+
+<span class="nb">set</span> <span class="n">xlabel</span> <span class="s2">&quot;Processors&quot;</span>
+<span class="nb">set</span> <span class="n">ylabel</span> <span class="s2">&quot;Time in s&quot;</span>
+
+<span class="nb">set</span> <span class="n">xrange</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="nb">set</span> <span class="n">yrange</span> <span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">set</span> <span class="n">key</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span>
+
+<span class="nb">set</span> <span class="n">data</span> <span class="n">style</span> <span class="n">linespoints</span>
+
+<span class="n">plot</span> <span class="s2">&quot;graph.dat&quot;</span>  <span class="n">using</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span> <span class="n">title</span> <span class="s2">&quot;block decomposition&quot;</span><span class="p">,</span> \
+     <span class="s2">&quot;graph.dat&quot;</span>  <span class="n">using</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span> <span class="n">title</span> <span class="s2">&quot;cyclic decomposition&quot;</span>
+
+<span class="o">@</span><span class="p">}</span>
+
+<span class="nd">@O</span> <span class="n">graph</span><span class="o">.</span><span class="n">dat</span> <span class="o">@</span><span class="p">{</span>
+<span class="c1">#</span>
+<span class="c1"># processor  time in s</span>
+<span class="c1">#              block    cycle</span>
+<span class="c1"># ----------------------------</span>
+    <span class="mi">0</span>   <span class="mf">2.990</span>   <span class="mf">2.730</span>
+    <span class="mi">1</span>   <span class="mf">2.970</span>   <span class="mf">2.800</span>
+    <span class="mi">2</span>   <span class="mf">2.950</span>   <span class="mf">2.830</span>
+    <span class="mi">3</span>   <span class="mf">2.760</span>   <span class="mf">2.780</span>
+    <span class="mi">4</span>   <span class="mf">2.530</span>   <span class="mf">2.690</span>
+    <span class="mi">5</span>   <span class="mf">2.510</span>   <span class="mf">2.700</span>
+    <span class="mi">6</span>   <span class="mf">2.330</span>   <span class="mf">2.710</span>
+    <span class="mi">7</span>   <span class="mf">2.680</span>   <span class="mf">2.750</span>
+<span class="o">@</span><span class="p">}</span>
+
+
+<span class="nd">@O</span> <span class="n">timings</span><span class="o">.</span><span class="n">tex</span> <span class="o">@</span><span class="p">{</span>
+\<span class="n">documentclass</span><span class="p">{</span><span class="n">article</span><span class="p">}</span>
+
+\<span class="n">usepackage</span><span class="p">{</span><span class="n">epsfig</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+
+\<span class="n">section</span><span class="p">{</span><span class="n">introduction</span><span class="p">}</span>
+
+<span class="n">This</span> <span class="n">file</span> <span class="n">shows</span> <span class="n">how</span> <span class="n">to</span> <span class="n">include</span> <span class="n">gnuplot</span> <span class="n">programs</span> <span class="n">directly</span> <span class="n">into</span> <span class="n">LaTeX</span><span class="o">.</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">figure</span><span class="p">}[</span><span class="n">htb</span><span class="p">]</span>
+\<span class="n">centerline</span><span class="p">{</span>\<span class="n">epsfig</span><span class="p">{</span><span class="n">file</span><span class="o">=</span><span class="n">graph</span><span class="o">.</span><span class="n">ps</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="ow">in</span><span class="p">}}</span>
+\<span class="n">caption</span><span class="p">{</span><span class="n">Graph</span><span class="p">}</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">figure</span><span class="p">}</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+<span class="o">@</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>To generate the output call</p>
+<p><em>nuweb timings.w</em></p>
+<p>This will create all files used for the document. Calling <em>make</em>
+will create the dvi file. View it with xdvi.</p>
+<p><strong>Impressive!!!</strong></p>
+<p>(I hope it works, let me know if you have difficulties.)</p>
+<p>Since you are using make you can do much more, like popping up a
+java application with a bouncing ball or something similar useful.</p>
+<p>I myself have integrated a couple of different 2d graph plotting
+programs and some preprocessors like latex2html to generate
+automatically some html pages.</p>
+</div>
+</div>
+</div>
+<div class="section" id="a-sample-latex-session-as-used-in-the-reu-class">
+<h2>4.3.4. A sample LaTeX session as used in the REU class<a class="headerlink" href="#a-sample-latex-session-as-used-in-the-reu-class" title="Permalink to this headline">¶</a></h2>
+<p>A very generic example is maintained by me for the REU class. It
+contains a simple LaTeX template using figures, programs, and
+bibliography. The bibliography makes use of the special bibunits
+package which allows to specify a references for each section
+separate. This might become handy while producing a Journal out of
+the collection of articles prepared in the class.</p>
+<p>The following sample session will automatically follow all necessary
+steps to produce a sample file.</p>
+<ul class="simple">
+<li>mkdir reu</li>
+<li>cd reu</li>
+<li>cp /home/T10D/latex/DIST/contrib/reu-gregor* .</li>
+<li>install</li>
+<li>make ps</li>
+<li>make view</li>
+<li>make print</li>
+</ul>
+<p>The installation program will automatically figure out your user
+name and change the originals appropiatly. This includes also the
+renaming of the files. Make an ls and see for yourself. Feel free to
+view the different files.</p>
+<p>The following files are of importance</p>
+<p><strong>reu-username.tex</strong></p>
+<p>The source for the LaTeX example.</p>
+<p><strong>reu-username-gloves.ps</strong></p>
+<p>The postscript figure as used in the reu-username.tex</p>
+<p><strong>reu-username-bib.bib</strong></p>
+<p>The references as used in the reu-username.tex</p>
+<p><strong>Makefile</strong></p>
+<p>Generates the postscript output reu-username.ps</p>
+<p>The best graphics program to draw pictures is tgif. If it is not
+installed you might want to install it yourself and send systems a
+mail asking to install it for you. The REU Teaching Assistant might
+be able to do it to. xfig is not as good.</p>
+<p>With gnuplot or xmgr/xvgr you can plot scattered 2d data. If you
+need more please check out the previous information.</p>
+<p>References can be defined via the usage of bibcard. It is relatively
+simple. Please, note that you have to specify a disjunct label with
+each new entry.</p>
+</div>
+<div class="section" id="source-to-the-reu-style">
+<h2>4.3.5. Source to the REU style<a class="headerlink" href="#source-to-the-reu-style" title="Permalink to this headline">¶</a></h2>
+<p>The REU style can be used as small example how to write your own
+classes. It is very easy. I have placed it on the anonymous ftp
+site. This way non NPAC users can download it and see how easy
+LaTeXis.
+<a class="reference external" href="/web/20000817095300/http://www.npac.syr.edu/users/gregor/ftp/reu.tar.gz">(reu.tar.gz)</a>
+The template with the name <em>reu-usernametex</em> has the following form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>\<span class="n">documentclass</span><span class="p">[</span><span class="n">twoside</span><span class="p">,</span><span class="mi">11</span><span class="n">pt</span><span class="p">]{</span><span class="n">reu</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+
+\<span class="n">REUSTYLE</span>
+
+\<span class="n">pagestyle</span><span class="p">{</span><span class="n">myheadings</span><span class="p">}</span>
+
+\<span class="n">title</span><span class="p">{</span><span class="n">Sonic</span> <span class="n">the</span> <span class="n">Weatherman</span><span class="p">}</span>
+
+\<span class="n">author</span><span class="p">{</span>
+<span class="n">Jon</span> <span class="n">von</span> <span class="n">Neumann</span>
+        \<span class="n">thanks</span><span class="p">{</span><span class="n">Research</span> <span class="n">Apprentice</span><span class="p">,</span> <span class="mi">1995</span> <span class="n">NPAC</span> <span class="n">REU</span> <span class="n">Program</span><span class="p">,</span>
+            <span class="p">{</span>\<span class="n">it</span> <span class="n">jon</span><span class="nd">@npac</span><span class="o">.</span><span class="n">syr</span><span class="o">.</span><span class="n">edu</span><span class="p">};</span> <span class="n">Mathematics</span> <span class="n">major</span><span class="p">,</span> <span class="n">Princeton</span> <span class="n">University</span><span class="p">,</span>
+            <span class="p">{</span>\<span class="n">it</span> <span class="n">jon</span><span class="nd">@pucc</span><span class="o">.</span><span class="n">princeton</span><span class="o">.</span><span class="n">edu</span><span class="p">}</span><span class="o">.</span>
+        <span class="p">}</span>
+\<span class="ow">and</span>
+<span class="n">Gregor</span> <span class="n">von</span> <span class="n">Laszewski</span>
+        \<span class="n">thanks</span><span class="p">{</span><span class="n">Northeast</span> <span class="n">Parallel</span> <span class="n">Architectures</span> <span class="n">Center</span><span class="p">,</span>
+                <span class="n">Syracuse</span> <span class="n">University</span><span class="p">,</span> <span class="p">{</span>\<span class="n">it</span> <span class="n">gregor</span><span class="nd">@npac</span><span class="o">.</span><span class="n">syr</span><span class="o">.</span><span class="n">edu</span><span class="p">}</span><span class="o">.</span>
+               <span class="p">}</span>
+<span class="p">}</span>
+
+\<span class="n">REUTITLE</span><span class="p">{</span><span class="mi">1996</span><span class="p">}</span>
+
+\<span class="n">markboth</span><span class="p">{</span><span class="n">von</span> <span class="n">Neumann</span> \<span class="o">&amp;</span> <span class="n">von</span> <span class="n">Laszewski</span> \<span class="o">&amp;</span> <span class="n">Bogucz</span><span class="p">}{</span><span class="n">Sonic</span> <span class="n">the</span> <span class="n">Weatherman</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">abstract</span><span class="p">}</span>
+<span class="n">Here</span> <span class="n">comes</span> <span class="n">the</span> <span class="n">abstarct</span> <span class="o">....</span> <span class="o">.</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">abstract</span><span class="p">}</span>
+
+\<span class="n">section</span><span class="p">{</span><span class="n">Introduction</span><span class="p">}</span>
+
+   <span class="n">Here</span> <span class="n">comes</span> <span class="n">the</span> <span class="n">motivation</span> <span class="ow">and</span> <span class="n">introduction</span> <span class="o">...</span> <span class="o">.</span>
+
+\<span class="n">section</span><span class="p">{</span><span class="n">Proposed</span> <span class="n">Work</span><span class="p">}</span>
+
+   <span class="n">Here</span> <span class="n">comes</span> <span class="n">the</span> <span class="n">proposal</span> <span class="k">for</span> <span class="n">the</span> <span class="n">work</span> <span class="n">planed</span> <span class="o">...</span> <span class="o">.</span>
+   <span class="n">Use</span> <span class="n">subsections</span> <span class="n">to</span> <span class="n">structure</span> <span class="n">the</span> <span class="n">paper</span> <span class="k">if</span> <span class="n">required</span><span class="o">.</span>
+
+\<span class="n">subsection</span><span class="p">{</span><span class="n">Visual</span> <span class="n">Interpretation</span><span class="p">}</span>
+
+<span class="n">This</span> <span class="n">section</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">to</span> <span class="n">demonstarte</span> <span class="n">the</span> <span class="n">inclusion</span> <span class="n">of</span> <span class="n">figures</span><span class="o">.</span>
+
+\<span class="n">FIGURE</span><span class="p">{</span><span class="n">htb</span><span class="p">}</span>                     <span class="o">%</span> <span class="n">placement</span>
+        <span class="p">{</span><span class="n">reu</span><span class="o">-</span><span class="n">username</span><span class="o">-</span><span class="n">gloves</span><span class="o">.</span><span class="n">ps</span><span class="p">}</span> <span class="o">%</span> <span class="n">PostScript</span> <span class="n">file</span>
+        <span class="p">{</span><span class="o">.</span><span class="mi">5</span><span class="p">}</span>                     <span class="o">%</span> <span class="n">zoom</span> <span class="ow">in</span> <span class="n">relation</span> <span class="n">to</span> <span class="n">textwidth</span>
+        <span class="p">{</span><span class="n">The</span> <span class="n">virtual</span> <span class="n">reality</span> <span class="n">dataglove</span> <span class="ow">is</span> <span class="n">fitted</span> <span class="n">on</span> <span class="n">the</span> <span class="n">user</span><span class="s1">&#39;s hand</span>
+         <span class="ow">and</span> <span class="n">has</span> <span class="n">sensors</span> <span class="n">that</span> <span class="n">provide</span> <span class="nb">input</span> <span class="n">to</span> <span class="n">the</span> <span class="n">computer</span><span class="o">.</span><span class="p">}</span> <span class="o">%</span><span class="n">caption</span>
+        <span class="p">{</span><span class="n">F</span><span class="p">:</span><span class="n">gloves</span><span class="p">}</span>  <span class="o">%</span> <span class="n">label</span>
+
+<span class="n">Figure</span><span class="o">~</span>\<span class="n">ref</span><span class="p">{</span><span class="n">F</span><span class="p">:</span><span class="n">gloves</span><span class="p">}</span> <span class="n">shows</span> <span class="o">....</span> <span class="o">.</span>
+
+\<span class="n">subsection</span><span class="p">{</span><span class="n">Including</span> <span class="n">Programs</span><span class="p">}</span>
+
+<span class="n">The</span> <span class="n">following</span> <span class="n">example</span> <span class="n">program</span> <span class="n">describes</span> <span class="n">what</span> <span class="ow">is</span> <span class="n">going</span> <span class="n">on</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">brain</span><span class="p">:</span>
+
+\<span class="n">NumberProgramstrue</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">programbox</span><span class="p">}</span>
+\<span class="n">PROC</span> <span class="o">|</span><span class="n">Brain</span><span class="o">|</span>
+   \<span class="n">FOREACH</span> <span class="o">|</span><span class="n">nerv</span><span class="o">|</span> \<span class="ow">in</span> <span class="o">|</span><span class="n">brain</span><span class="o">|</span>
+      \<span class="n">FOREACH</span> <span class="o">|</span><span class="n">dendrit</span><span class="o">|</span> \<span class="ow">in</span> <span class="o">|</span><span class="n">nerv</span><span class="o">|</span>
+         <span class="o">|</span> <span class="n">get</span> <span class="n">the</span> <span class="n">values</span> <span class="n">on</span> <span class="n">the</span> <span class="nb">input</span> <span class="n">synapses</span> <span class="o">|</span>
+         <span class="o">|</span> <span class="n">send</span> <span class="n">new</span> <span class="n">valoues</span> <span class="n">to</span> <span class="n">output</span> <span class="n">synapses</span> <span class="o">|</span>
+      \<span class="n">END</span> <span class="o">~</span> \<span class="n">FOREACH</span> \<span class="n">untab</span>
+   \<span class="n">END</span> <span class="o">~</span> \<span class="n">FOREACH</span> \<span class="n">untab</span>
+   <span class="o">|</span><span class="n">switch</span> <span class="n">of</span> <span class="ow">and</span> <span class="n">sleep</span><span class="o">|</span>
+\<span class="n">END</span> <span class="o">~</span> \<span class="n">PROC</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">programbox</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
+
+
+\<span class="n">REFERENCES</span><span class="p">{</span><span class="n">reu</span><span class="o">-</span><span class="n">username</span><span class="o">.</span><span class="n">bib</span><span class="p">}</span>
+
+\<span class="n">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="expanding-your-own-latex-environment">
+<h2>4.3.6. Expanding your own LaTeX environment<a class="headerlink" href="#expanding-your-own-latex-environment" title="Permalink to this headline">¶</a></h2>
+<p>What if you found in a nice book a style or class you would like to
+use and it is not installed at your site? One way of doing it is to
+tell your systems administrator to install it but this could take
+years ;-) because they are usually to busy to keep the machines
+running.</p>
+<p>Why not install it yourself!</p>
+<p>In a previous section I explained the TEXINPUTS path. The one given
+assumes that you have a &#8216;tex&#8217; directory under your home directory.
+In this directory you can put all kinds of extensions.</p>
+<p>But where do you get the files from?</p>
+<p>This is easy. Use CTAN. below I have given a sample session to
+anonymously ftp a style file. The commands given in <code class="docutils literal"><span class="pre">typewriter</span></code>
+font are the input commands. while the once in roman are the
+response from the ftp server. Please use the CTAN which is closest
+to you</p>
+<p><strong>US</strong></p>
+<p><a class="reference external" href="/web/20000817095300/http://www.cdrom.com/pub/tex/ctan/CTAN.sites">TeX and LaTeX
+Archives</a></p>
+<p><strong>UK</strong></p>
+<p>ftp.tex.ac.uk</p>
+<p><strong>Germany</strong></p>
+<p>ftp.dante.de</p>
+<p><strong>Sample Session</strong></p>
+<p><code class="docutils literal"><span class="pre">ncftp</span> <span class="pre">ftp.tex.ac.uk</span></code></p>
+<p>Guest login ok, send your complete e-mail address as password.
+Welcome, archive user! This is an FTP server for the UK TeX Archive.
+If you have any unusual problems, please report them via e-mail to
+ctan-uktex.ac.uk. If you do have problems, please try using a dash
+(-) as the first character of your password - this will turn off the
+continuation messages that may be confusing your ftp client. This is
+the UK node of the Comprehensive TeX Archive Network (CTAN). Other
+participating hosts in the CTAN and their root CTAN directories
+include:</p>
+<p><a class="reference external" href="/web/20000817095300/http://www.cdrom.com/pub/tex/ctan/CTAN.sites">TeX and LaTeX
+Archives</a></p>
+<p>ftp.dante.de tex-archive</p>
+<p>In order to reduce network load, it is recommended that you use the
+CTAN host which is located in the closest proximity to your site.</p>
+<p>IMPORTANT NOTE:</p>
+<p>This ftp server supports dynamic creation of zip, zoo, or tar.gz
+archives. If you want the contents of a directory (*and all its
+subdirectories*), go to the level above and `get&#8217; the directory
+name suffixed by .zip, zoo or .tar.gz e.g.</p>
+<p>cd /pub/archive/macros/latex/contrib/supported</p>
+<p>binary</p>
+<p>get rotating.zip</p>
+<p>will put together the whole &#8220;rotating&#8221; package for you.</p>
+<p>Guest login ok, access restrictions apply.</p>
+<p>Logged into ftp.tex.ac.uk.</p>
+<p>Please read the file README</p>
+<p>it was last modified on Thu Jan 18 10:23:46 1996 - 117 days ago</p>
+<p>NcFTP 1.8.6 (Octboer 30, 1994) by Mike Gleason, NCEMRSoft.</p>
+<p>ftp.tex.ac.uk:</p>
+<p>ncftp&gt;<code class="docutils literal"><span class="pre">cd</span> <span class="pre">tex-archive</span></code></p>
+<p>ncftp&gt;<code class="docutils literal"><span class="pre">quote</span> <span class="pre">cite</span> <span class="pre">index</span> <span class="pre">bibunits.sty</span></code></p>
+<p>500 &#8216;CITE index bibunits.sty&#8217;: command not understood.</p>
+<p>ftp.tex.ac.uk:/ctan/tex-archive/macros/latex/contrib/supported/citen</p>
+<p>ncftp&gt;<code class="docutils literal"><span class="pre">mget</span> <span class="pre">macros/latex209/contrib/misc/bibunits.sty</span></code></p>
+<p>ncftp&gt;<code class="docutils literal"><span class="pre">quit</span></code></p>
+<p>That was it. Now you have the bibunits.sty file in your current
+directory. Place it in <code class="docutils literal"><span class="pre">~</span></code>/tex and you can use it. This way you
+can download many many files. Please, coordinate with other users in
+order to avoid downloading all the same style files.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pandoc.html" class="btn btn-neutral float-right" title="4.4. pandoc" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="emacs.html" class="btn btn-neutral" title="4.2. Emacs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Gregor von Laszewski.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

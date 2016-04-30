@@ -1,0 +1,32 @@
+Refcards
+========
+
+Emacs
+-----
+
+* https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf
+
+Vi
+--
+
+* http://www.ks.uiuc.edu/Training/Tutorials/Reference/virefcard.pdf
+
+Linux
+-----
+
+* http://www.cs.jhu.edu/~joanne/unixRC.pdf
+
+Makefile
+--------
+
+* http://www.tofgarion.net/lectures/IN323/refcards/refcardMakeIN323.pdf
+
+R
+--
+
+* https://cran.r-project.org/doc/contrib/Short-refcard.pdf
+  
+Collections
+------------
+
+* http://michaelgoerz.net/refcards/
