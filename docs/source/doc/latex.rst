@@ -111,7 +111,10 @@ I have made very good experiences with Lyx, however it is not
 widespread and you must assure that the team you work with uses it
 consistently and that you all use the same version.
 
+Using the ACM templates
 
+* http://jack-kelly.com/getting_latex_and_lyx_to_use_acm_sig_class_file
+*https://wiki.lyx.org/Examples/AcmSiggraph
 
 How to edit Bibliographies?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

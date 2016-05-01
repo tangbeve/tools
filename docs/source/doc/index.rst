@@ -13,5 +13,5 @@ Docuumentation
    pandoc
    rst
    sphinx
-
+   mendeley
   

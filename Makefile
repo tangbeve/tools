@@ -14,6 +14,9 @@ endif
 doc: 
 	cd docs; make html
 
+epub: 
+	cd docs; make epub
+
 publish:
 	ghp-import -n -p docs/build/html
 

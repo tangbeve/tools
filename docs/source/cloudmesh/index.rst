@@ -8,3 +8,4 @@ Cloudmesh
    :numbered:
 
    cloudmesh
+   cluster

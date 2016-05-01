@@ -13,7 +13,7 @@ Development Tools Primer
    doc/index
    iaas/index
    management/index
-   python/index
+   languages/index
    windows/index
    os/index
    refcards/index   

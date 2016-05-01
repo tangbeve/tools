@@ -49,6 +49,7 @@ Listtable
 
       "von Laszewski", "Gregor", "gray"
 
+      
 .. csv-table:: a title
    :header: "Name", "Firstname", "eyes"
    :widths: 20, 20, 10
@@ -82,12 +83,15 @@ Seealso
 Note
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note::  This is a **note** box.
-
 ::
 
     .. note::  This is a **note** box.
 
+	       
+.. note::  This is a **note** box.
+
+
+	       
 Warning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

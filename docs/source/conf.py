@@ -57,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Cloudmesh Tools Primer'
-copyright = u'2016, Gregor von Laszewski'
+# copyright = u'2016, Gregor von Laszewski'
 author = u'Gregor von Laszewski'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -186,10 +186,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -237,7 +237,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'CloudmeshToolsPrimer.tex', u'Cloudmesh Tools Primer Documentation',
+    (master_doc, 'CloudmeshToolsPrimer.tex', u'Tools Primer For Big Data',
      u'Gregor von Laszewski', 'manual'),
 ]
 
@@ -305,7 +305,7 @@ texinfo_documents = [
 epub_title = project
 epub_author = author
 epub_publisher = author
-epub_copyright = copyright
+# epub_copyright = copyright
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = project

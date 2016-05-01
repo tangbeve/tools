@@ -1,8 +1,11 @@
-Languages
+Java
 ==============
 
 .. toctree::
    :maxdepth: 2
+   :glob:
    :numbered:
-   
-   language/java/maven.rst
+
+   maven
+
+
