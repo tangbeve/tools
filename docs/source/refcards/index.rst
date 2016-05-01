@@ -22,6 +22,8 @@ Refcards
 +-------------+-----------------------------------------------------------------------+
 | LaTeX       | https://wch.github.io/latexsheet/latexsheet.pdf                       |
 +-------------+-----------------------------------------------------------------------+
+| Git         | https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf  |
++-------------+-----------------------------------------------------------------------+
 
 
 * http://docs.openstack.org/user-guide/cli_cheat_sheet.html
