@@ -14,9 +14,9 @@ Development Tools Primer
    iaas/index
    management/index
    python/index
-   refcards/index
    windows/index
    os/index
+   refcards/index   
 
    
 Indices and tables
