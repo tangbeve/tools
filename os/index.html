@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>9. OS &mdash; Cloudmesh Tools Primer 0.1 documentation</title>
+  <title>8. OS &mdash; Cloudmesh Tools Primer 0.1 documentation</title>
   
 
   
@@ -30,9 +30,7 @@
   
 
   
-    <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../index.html"/>
-        <link rel="next" title="9.1. Linux and Shell Scripting" href="linux.html"/>
-        <link rel="prev" title="8.2. Windows" href="../windows/windows.html"/> 
+    <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,20 +79,10 @@
           
             
             
-                <ul class="current">
+                <p class="caption"><span class="caption-text">A. Introduction</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../class/index.html">1. Class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../cloudmesh/index.html">2. Cloudmesh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devops/index.html">3. DevOps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../doc/index.html">4. Docuumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../iaas/index.html">5. IaaS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../management/index.html">6. Management</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/index.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">8. Windows</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">9. OS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linux.html">9.1. Linux and Shell Scripting</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../refcards/index.html">10. Refcards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">2. Tools</a></li>
 </ul>
 
             
@@ -125,7 +113,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>9. OS</li>
+    <li>8. OS</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -140,10 +128,47 @@
            <div itemprop="articleBody">
             
   <div class="section" id="os">
-<h1>9. OS<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h1>
+<h1>OS<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="linux.html">9.1. Linux and Shell Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux.html">1. Linux and Shell Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">2. SSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#adding-other-users-keys">2.1. adding other users keys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#security-groups">2.2. security groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#security-groups-as-projects-on-kilo-and-chameleon-are-shar">2.3. security groups**: as projects on kilo and chameleon are shar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#naming-of-vms">2.4. naming of vms*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#naming-on-key-on-the-cloud">2.5. naming on key on the cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#accessing-root-on-chameleon-images">2.6. accessing root on chameleon images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#unsetting-os-variables">2.7. unsetting OS variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#keys-on-multiple-machines">2.8. keys on multiple machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#tunnel">2.9. tunnel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#connecting-between-vms">2.10. connecting between vms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#conclusion">2.11. Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#but-my-vm-is-active-i-can-not-login">2.12. But my vm is active, I can not login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#denial-of-service-attack-to-your-own-machine">2.13. Denial of service attack to your own machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#focusing-to-get-a-vm-to-run-thats-obviously-dead">2.14. Focusing to get a vm to run thats obviously dead</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html#ssh-keys">3. SSH Keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#what-is-ssh">3.1. What is SSH?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#id1">3.2. SSH keys</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html#using-ssh-keys">4. Using SSH keys</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#using-ssh-from-windows">4.1. Using SSH from Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#generate-a-ssh-key">4.2. Generate a SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#add-or-replace-passphrase-for-an-already-generated-key">4.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#upload-the-key-to-the-futuregrid-portal">4.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#testing-your-ssh-key">4.5. Testing your ssh key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html#testing-your-ssh-key-for-hotel">4.6. Testing your ssh key for Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sh.html">5. Shell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sh.html#basic-shell-commands">5.1. Basic Shell Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sh.html#editors-that-work-in-a-terminal">5.2. Editors that Work in a Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sh.html#exercises">5.3. Exercises</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -153,25 +178,14 @@
           </div>
           <footer>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="linux.html" class="btn btn-neutral float-right" title="9.1. Linux and Shell Scripting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../windows/windows.html" class="btn btn-neutral" title="8.2. Windows" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, Gregor von Laszewski.
 
     </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  </div> 
 
 </footer>
 

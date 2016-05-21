@@ -1,28 +1,22 @@
 
-Development Tools Primer
-======================
+Class Notes
+=========================
 
 .. toctree::
+   :caption: A. Introduction
    :maxdepth: 3
    :glob:
    :numbered:
 
    class/index
-   cloudmesh/index
-   devops/index
-   doc/index
-   iaas/index
-   management/index
-   python/index
-   windows/index
-   os/index
-   refcards/index   
+   tools/index
 
-   
+
+
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

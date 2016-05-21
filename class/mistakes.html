@@ -32,7 +32,7 @@
   
     <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../index.html"/>
         <link rel="up" title="1. Class" href="index.html"/>
-        <link rel="next" title="2. Cloudmesh" href="../cloudmesh/index.html"/>
+        <link rel="next" title="1.2. Documentation Management" href="report.html"/>
         <link rel="prev" title="1. Class" href="index.html"/> 
 
   
@@ -86,25 +86,34 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">1. Class</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1.1. Common Mistakes When Taking This Class</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#time-management">1.1.1. Time Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#i-only-read-what-is-provided-to-me-on-slides-or-watch-videos">1.1.2. I only read what is provided to me on slides or watch videos</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ssh">1.1.3. SSH</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ssh-add">1.1.4. SSH add</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ssh-keygen">1.1.5. SSH keygen</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ssh-config">1.1.6. ./ssh/config</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#passwords">1.1.7. Passwords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#project-requirement-management">1.1.2. Project Requirement Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#information-management">1.1.3. Information Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security-management">1.1.4. Security Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ssh">1.1.4.1. SSH</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ssh-add">1.1.4.2. SSH add</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ssh-keygen">1.1.4.3. SSH keygen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ssh-config">1.1.4.4. ./ssh/config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#passwords">1.1.4.5. Passwords</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-management">1.1.5. Documentation Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#report-checklist">1.1.5.1. Report Checklist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="report.html">1.2. Documentation Management</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../cloudmesh/index.html">2. Cloudmesh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devops/index.html">3. DevOps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../doc/index.html">4. Docuumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../iaas/index.html">5. IaaS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../iaas/index.html">5. Languages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../management/index.html">6. Management</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/index.html">7. Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../refcards/index.html">8. Refcards</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">9. Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../os/index.html">10. OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../languages/index.html">7. Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">8. Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../os/index.html">9. OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../refcards/index.html">10. Refcards</a></li>
 </ul>
 
             
@@ -159,26 +168,47 @@
 <ul class="simple">
 <li>Do not underestimate the time it takes to read the information</li>
 <li>Do not underestimate the time it takes to understand the information</li>
-<li>Do not underestimate the time to do the project</li>
+<li>Do not underestimate the time to do the project<ul>
 <li>There are still 10 weeks left till the project is due so let me
 start in 4 weeks ….</li>
+</ul>
+</li>
 <li>Do not postpone the project till the last moment</li>
-<li>Do review the requirements of the project and do not just do a
-project that you like to do</li>
 <li>Do spend significant time on the documentation on how to run your
-application</li>
+application, instead of writing scripts that can manage several of
+these steps automatically</li>
 </ul>
 </div>
-<div class="section" id="i-only-read-what-is-provided-to-me-on-slides-or-watch-videos">
-<h2>1.1.2. I only read what is provided to me on slides or watch videos<a class="headerlink" href="#i-only-read-what-is-provided-to-me-on-slides-or-watch-videos" title="Permalink to this headline">¶</a></h2>
-<p>A class gives you a good introduction into a topic. However you should
+<div class="section" id="project-requirement-management">
+<h2>1.1.2. Project Requirement Management<a class="headerlink" href="#project-requirement-management" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Do review the requirements of the project and do not just do a
+project that you like to do</li>
+<li>Develop deployment scripts in ansible</li>
+<li>Develop supporting scripts in python, use docopts for parameter and documentation</li>
+<li>Optionally develop scripts in bash</li>
+<li>Optionally develop supporting scripts with Makefiles</li>
+<li>Do not use .bat scripts, scripts must run on Linux</li>
+<li>Use the galaxy role layout to structure your scripts, but do not commit to galaxy</li>
+</ul>
+</div>
+<div class="section" id="information-management">
+<h2>1.1.3. Information Management<a class="headerlink" href="#information-management" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>I only read what is provided to me on slides or watch videos<ul>
+<li>A class gives you a good introduction into a topic. However you should
 assume that in order to gain more knowledge you can augment it by
 obtaining additional information beyond the class material.
 Additional tutorials, papers, or other information may enhance your
-knowledge and you benefit from it.</p>
+knowledge and you benefit from it.</li>
+</ul>
+</li>
+</ul>
 </div>
+<div class="section" id="security-management">
+<h2>1.1.4. Security Management<a class="headerlink" href="#security-management" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="ssh">
-<h2>1.1.3. SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
+<h3>1.1.4.1. SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h3>
 <p>Strangely enough a simple concept such as SSH often is cause for
 confusion by the student It is important that you have an excellent
 working knowledge of ssh. This means that watching a video or reading
@@ -191,7 +221,7 @@ users access a VM and where multiple users access multiple VMs. In
 other classes you may not be confronted with this issue.</p>
 </div>
 <div class="section" id="ssh-add">
-<h2>1.1.4. SSH add<a class="headerlink" href="#ssh-add" title="Permalink to this headline">¶</a></h2>
+<h3>1.1.4.2. SSH add<a class="headerlink" href="#ssh-add" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Do not use password less keys on your laptops. Why? Please answer
 yourself</li>
@@ -203,7 +233,7 @@ not to do that</li>
 </ul>
 </div>
 <div class="section" id="ssh-keygen">
-<h2>1.1.5. SSH keygen<a class="headerlink" href="#ssh-keygen" title="Permalink to this headline">¶</a></h2>
+<h3>1.1.4.3. SSH keygen<a class="headerlink" href="#ssh-keygen" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>What is SSH keygen?</li>
 <li>What type of key should I use?</li>
@@ -213,18 +243,50 @@ not to do that</li>
 </ul>
 </div>
 <div class="section" id="ssh-config">
-<h2>1.1.6. ./ssh/config<a class="headerlink" href="#ssh-config" title="Permalink to this headline">¶</a></h2>
+<h3>1.1.4.4. ./ssh/config<a class="headerlink" href="#ssh-config" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>What is ssh config?</li>
 <li>How can I use this to my advantage to log into vms</li>
 </ul>
 </div>
 <div class="section" id="passwords">
-<h2>1.1.7. Passwords<a class="headerlink" href="#passwords" title="Permalink to this headline">¶</a></h2>
+<h3>1.1.4.5. Passwords<a class="headerlink" href="#passwords" title="Permalink to this headline">¶</a></h3>
 <p>Do not hardcode and passwords or any private information into your
 code. Instead use configuration files and secure them appropriately</p>
 <p>Make sure you typed in your password correctly. Double check CAPS LOCK</p>
 <p>Do not use passwords that are easy to guess</p>
+</div>
+</div>
+<div class="section" id="documentation-management">
+<h2>1.1.5. Documentation Management<a class="headerlink" href="#documentation-management" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="report-checklist">
+<h3>1.1.5.1. Report Checklist<a class="headerlink" href="#report-checklist" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>[ ] is the report spell checked?</li>
+<li>[ ] are you using <strong>a</strong> and <strong>the</strong> properly</li>
+<li>in case of word: not using sections in word documents</li>
+<li>in case of RST: not using underlines to indicate sections and
+subsections</li>
+<li>in case of RST: not using numbered sections. While LaTeX and word do
+this for you automatically</li>
+<li>not using bulleted lists in word</li>
+<li>carelessly pasting and copying into the document without using
+proper formats</li>
+<li>Based on previous experience we requires that LaTeX and Word reporst
+use the acm word/latex templates that can be downloaded fro the
+net. No other format may be used</li>
+<li>not leveraging parallel editing: onedrive allows you to
+edit a word document in collaboration</li>
+<li>github allows you to collaborate on latex documents</li>
+<li>We do not accept google docs. However you can use it to develop
+things that you may past and copy into your final report. We
+observed that students that use google docs underestimate the lack
+of structural document features and lack of 2 column format. Formats
+written in google docs are typically of lower quality.
+The acm template gives you guidance how to write a paper
+properly. Including references.</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -235,7 +297,7 @@ code. Instead use configuration files and secure them appropriately</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../cloudmesh/index.html" class="btn btn-neutral float-right" title="2. Cloudmesh" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="report.html" class="btn btn-neutral float-right" title="1.2. Documentation Management" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="1. Class" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -247,11 +309,9 @@ code. Instead use configuration files and secure them appropriately</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, Gregor von Laszewski.
 
     </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  </div> 
 
 </footer>
 

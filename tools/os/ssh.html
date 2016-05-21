@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.7.2. SSH &mdash; Cloudmesh Tools Primer 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../../index.html"/>
+        <link rel="up" title="2.7. OS" href="index.html"/>
+        <link rel="next" title="2.7.5. Shell" href="sh.html"/>
+        <link rel="prev" title="2.7.1. Linux and Shell Scripting" href="linux.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cloudmesh Tools Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">A. Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../class/index.html">1. Class</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Tools</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../cloudmesh/index.html">Cloudmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../devops/index.html">2.1. DevOps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/index.html">2.2. Docuumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../iaas/index.html">2.3. Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../management/index.html">2.4. Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../languages/index.html">2.5. Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../windows/index.html">2.6. Windows</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.7. OS</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="linux.html">2.7.1. Linux and Shell Scripting</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.7.2. SSH</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adding-other-users-keys">2.7.2.1. adding other users keys</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-groups">2.7.2.2. security groups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security-groups-as-projects-on-kilo-and-chameleon-are-shar">2.7.2.3. security groups**: as projects on kilo and chameleon are shar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#naming-of-vms">2.7.2.4. naming of vms*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#naming-on-key-on-the-cloud">2.7.2.5. naming on key on the cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#accessing-root-on-chameleon-images">2.7.2.6. accessing root on chameleon images</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unsetting-os-variables">2.7.2.7. unsetting OS variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keys-on-multiple-machines">2.7.2.8. keys on multiple machines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tunnel">2.7.2.9. tunnel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connecting-between-vms">2.7.2.10. connecting between vms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conclusion">2.7.2.11. Conclusion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#but-my-vm-is-active-i-can-not-login">2.7.2.12. But my vm is active, I can not login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#denial-of-service-attack-to-your-own-machine">2.7.2.13. Denial of service attack to your own machine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#focusing-to-get-a-vm-to-run-thats-obviously-dead">2.7.2.14. Focusing to get a vm to run thats obviously dead</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-keys">2.7.3. SSH Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-ssh">2.7.3.1. What is SSH?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.7.3.2. SSH keys</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-ssh-keys">2.7.4. Using SSH keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-ssh-from-windows">2.7.4.1. Using SSH from Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-a-ssh-key">2.7.4.2. Generate a SSH key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-or-replace-passphrase-for-an-already-generated-key">2.7.4.3. Add or Replace Passphrase for an Already Generated Key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upload-the-key-to-the-futuregrid-portal">2.7.4.4. Upload the key to the FutureGrid Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing-your-ssh-key">2.7.4.5. Testing your ssh key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#testing-your-ssh-key-for-hotel">2.7.4.6. Testing your ssh key for Hotel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sh.html">2.7.5. Shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../refcards/index.html">2.8. Refcards</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Cloudmesh Tools Primer</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">2. Tools</a> &raquo;</li>
+      
+          <li><a href="index.html">2.7. OS</a> &raquo;</li>
+      
+    <li>2.7.2. SSH</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/tools/os/ssh.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ssh">
+<h1>2.7.2. SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://bdossp-spring2016.readthedocs.io/en/latest/faq.html">https://bdossp-spring2016.readthedocs.io/en/latest/faq.html</a></li>
+</ul>
+<div class="section" id="adding-other-users-keys">
+<h2>2.7.2.1. adding other users keys<a class="headerlink" href="#adding-other-users-keys" title="Permalink to this headline">¶</a></h2>
+<p>put all keys into the authorized_keys file and distribute them on all vms by placing them at:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>
+</pre></div>
+</div>
+<p>WARNING: before you do this you must make sure that all other keys such as the once created on the vm into the user account or the cc account are also copied into that file. If you just replace the
+file you may lose access if you forgot to include the appropriate keys, you may not recover form
+this if you overwrote the wrong keys.</p>
+</div>
+<div class="section" id="security-groups">
+<h2>2.7.2.2. security groups<a class="headerlink" href="#security-groups" title="Permalink to this headline">¶</a></h2>
+<p>we have seen many students deleting and modifying the default security group, thus we recommend each project sets up a clearly distinguishable security group</p>
+</div>
+<div class="section" id="security-groups-as-projects-on-kilo-and-chameleon-are-shar">
+<h2>2.7.2.3. security groups**: as projects on kilo and chameleon are shar<a class="headerlink" href="#security-groups-as-projects-on-kilo-and-chameleon-are-shar" title="Permalink to this headline">¶</a></h2>
+<p>It is best to create your own security group under the name</p>
+<blockquote>
+<div>&lt;portalname&gt;-default</div></blockquote>
+<p>and add your rules to that</p>
+</div>
+<div class="section" id="naming-of-vms">
+<h2>2.7.2.4. naming of vms*<a class="headerlink" href="#naming-of-vms" title="Permalink to this headline">¶</a></h2>
+<p>all vms should have your &lt;portalname&gt; in the name. This will allow you to identify the vms you work with easily</p>
+</div>
+<div class="section" id="naming-on-key-on-the-cloud">
+<h2>2.7.2.5. naming on key on the cloud<a class="headerlink" href="#naming-on-key-on-the-cloud" title="Permalink to this headline">¶</a></h2>
+<p>it is best to name the key on the cloud with your &lt;portalname&gt; in order not to confuse that with others its also good practice to optionally put  -key behind it, SO your key name would be &lt;portalname&gt;-key</p>
+</div>
+<div class="section" id="accessing-root-on-chameleon-images">
+<h2>2.7.2.6. accessing root on chameleon images<a class="headerlink" href="#accessing-root-on-chameleon-images" title="Permalink to this headline">¶</a></h2>
+<p>as documented in the chameleon documentation of their openstack cloud the root user on chameleon images is cc and not ubuntu</p>
+</div>
+<div class="section" id="unsetting-os-variables">
+<h2>2.7.2.7. unsetting OS variables<a class="headerlink" href="#unsetting-os-variables" title="Permalink to this headline">¶</a></h2>
+<p>if you used or sourced openrc.sh files from kilo and switch to chameleon, you naturally need to unset them. Best is to make sure your do not have them in bashrc or bash profile and double check with env that no variable starts with <a href="#id8"><span class="problematic" id="id9">OS_</span></a>. If so you need to unset and best start a new terminal, doublecheck</p>
+</div>
+<div class="section" id="keys-on-multiple-machines">
+<h2>2.7.2.8. keys on multiple machines<a class="headerlink" href="#keys-on-multiple-machines" title="Permalink to this headline">¶</a></h2>
+<p>please be aware that you may work with keys from multiple machines. first you typically have the id_rsa key on your laptop, that is the key that you should upload with the openstack command to the cloud under the name &lt;portalname&gt;-key this name you will use when booting up machines from your laptop.
+However, as this key does not exists on other machines other than your laptop (and if it does you violate any security) You will have to add any other public key to the authorized_keys file in your .ssh directory</p>
+<p>The way to do this is to login for example in all your vms with a script from your laptop, invoke the ssh-keygen there and copy all the keys to your local machine while concatenating them with cat &gt;&gt; to a file ~/authorized_keys. Than you copy that file with all the keys (do not forget to add the authorized keys file from your laptop) to all machines. into ~/.ssh/authorized_keys</p>
+<p>Now its time to test if this works, use ssh-add to add your local key to the keychain, than you do not have to always type in a password going to a vm. Remember that the ssh-keygen on the vms will not use a password. This will than allow that you can login from each vm to each vm.</p>
+<p>SIMPLE enough, and i recommend writing a shell or even better a python script for that</p>
+</div>
+<div class="section" id="tunnel">
+<h2>2.7.2.9. tunnel<a class="headerlink" href="#tunnel" title="Permalink to this headline">¶</a></h2>
+<p>at times you will be out of floating ips and you can assign one vm form your pool a floating ip or as badi has set up a “proxy” vm.</p>
+<p>You can than add to the .ssh/config file the ssh tunnel specification to any of the machines. a script to do this is helpful.</p>
+<p>For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">vm1</span>
+    <span class="n">User</span>  <span class="n">gvonlasz</span>
+    <span class="n">Hostname</span> <span class="o">&lt;</span><span class="n">ipof</span> <span class="n">my</span> <span class="n">proxy</span> <span class="n">machine</span>
+    <span class="n">ProxyCommand</span>  <span class="n">ssh</span> <span class="o">&lt;</span><span class="n">ipofthemachineirealyneedtogetto</span><span class="o">&gt;</span> <span class="n">nc</span> <span class="o">%</span><span class="n">h</span> <span class="o">%</span><span class="n">p</span>
+</pre></div>
+</div>
+<p>so this way if i say:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">vm1</span> <span class="n">uname</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>I do a tunnel hrough the proxy machine and execute on the vm1:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">laptop</span> <span class="o">-&gt;</span> <span class="n">proxy</span> <span class="o">-&gt;</span> <span class="n">vm1</span>
+</pre></div>
+</div>
+<p>Seems simple enough</p>
+<p>(hopefully i did not mistype here ;-) )</p>
+<p>As you can see at no time I leave the laptop all controlled programmatically</p>
+</div>
+<div class="section" id="connecting-between-vms">
+<h2>2.7.2.10. connecting between vms<a class="headerlink" href="#connecting-between-vms" title="Permalink to this headline">¶</a></h2>
+<p>assume you have done the key distribution, than it is possible to simply</p>
+<p>execute an ssh command to reach another vm as you are authorized to access it via your password less keys. For each vm you have your own key. As in the previous step for distribution you have only copied public keys this will all be secure.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>2.7.2.11. Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>This sets up a really elementary security infrastructure so you can login from laptop to any of your vms and from any vm to each other.</p>
+</div>
+<div class="section" id="but-my-vm-is-active-i-can-not-login">
+<h2>2.7.2.12. But my vm is active, I can not login<a class="headerlink" href="#but-my-vm-is-active-i-can-not-login" title="Permalink to this headline">¶</a></h2>
+<p>Just because your vm is active does not mean you can login. remember a machine gets active whne it starts booting. the boot process can take multiple minutes</p>
+</div>
+<div class="section" id="denial-of-service-attack-to-your-own-machine">
+<h2>2.7.2.13. Denial of service attack to your own machine<a class="headerlink" href="#denial-of-service-attack-to-your-own-machine" title="Permalink to this headline">¶</a></h2>
+<p>In the past I saw students looping through an ssh command and as soon as it failed issued a new one
+during boot. They did it so many times that they flooded the network as they did it not just with
+one but many many more vms. Multiply this by x users and you can see that alone through this
+process you can create a denial of service attack on cloud services. So what you have to do is to
+put a sleep between such ssh attempts to see if your vm is really up. Put at least 30 seconds. at
+time it can be as much as 10 minutes dependent on usage.</p>
+</div>
+<div class="section" id="focusing-to-get-a-vm-to-run-thats-obviously-dead">
+<h2>2.7.2.14. Focusing to get a vm to run thats obviously dead<a class="headerlink" href="#focusing-to-get-a-vm-to-run-thats-obviously-dead" title="Permalink to this headline">¶</a></h2>
+<p>sometimes I see effort being spend on reviving a vm as the argument is i spend so much time setting it up.</p>
+<p>not so, if you spend so much time it should all be done in scripts and thus repeatable. Thus if something is wrong you often are better of just replicating the setup on a new vm and delete toe old one(s).</p>
+<p>THIS IS A ROUGH DRAFT THAT I INTEND TO IMPROVE</p>
+<p>Also we will have this setup in the next class available as command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cm</span> <span class="n">cluster</span> <span class="o">-</span><span class="n">n</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>will do all of the above automatically</p>
+<p>Hope I could shed some light on how I work with vms</p>
+<p>From old REU</p>
+</div>
+</div>
+<div class="section" id="ssh-keys">
+<h1>2.7.3. SSH Keys<a class="headerlink" href="#ssh-keys" title="Permalink to this headline">¶</a></h1>
+<p>From: <a class="reference external" href="https://github.com/cloudmesh/reu/blob/master/doc/source/ssh.rst">https://github.com/cloudmesh/reu/blob/master/doc/source/ssh.rst</a></p>
+<div class="section" id="what-is-ssh">
+<h2>2.7.3.1. What is SSH?<a class="headerlink" href="#what-is-ssh" title="Permalink to this headline">¶</a></h2>
+<p>SSH, &#8220;Secure Shell,&#8221; or &#8220;Secure Socket Shell&#8221; is an interface for UNIX based systems which allows for secure remote access to computers. SSH transfers are encrypted and secured using &#8220;ssh keys&#8221; and digital certificates.</p>
+<dl class="docutils">
+<dt>Sources:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="http://searchsecurity.techtarget.com/definition/Secure-Shell">http://searchsecurity.techtarget.com/definition/Secure-Shell</a></li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/Secure_Shell">http://en.wikipedia.org/wiki/Secure_Shell</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h2>2.7.3.2. SSH keys<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>One method of identifying and authorizing a connection to an SSH server involves the use of SSH keys. This method is known as public-key cryptography. Public-key cryptography using SSH keys is a convenience for developers interested in connecting to machines remotely securely and without password authentication.</p>
+<div class="section" id="how-they-work">
+<h3>2.7.3.2.1. How they work...<a class="headerlink" href="#how-they-work" title="Permalink to this headline">¶</a></h3>
+<p>When seeking to connect to a system via SSH, one must generate an SSH-key pair: a private and public key. The private key is maintained on the local machine while the public key is shared with the machine to be connected with.</p>
+<p>When a user with a public/private key pair requests a connection, the server sends &#8220;a challenge.&#8221; This challenge is decoded locally on the user&#8217;s machine using the private key. Any information sent across the network is encrypted using the public key.</p>
+<p>This process occurs behind the scenes: the user should not have to be more involved than requesting a connection to the server.</p>
+<dl class="docutils">
+<dt>Sources:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://wiki.archlinux.org/index.php/SSH_Keys">https://wiki.archlinux.org/index.php/SSH_Keys</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="obtaining-a-key">
+<h3>2.7.3.2.2. Obtaining a key<a class="headerlink" href="#obtaining-a-key" title="Permalink to this headline">¶</a></h3>
+<p>To generate the public/private key pair, enter the following command in your local Linux/Unix machine:</p>
+<blockquote>
+<div>::
+ssh-keygen -t rsa</div></blockquote>
+<p>The command will ask you where to save your keys. The default is USER_HOME/.ssh</p>
+<p>The next prompt is for a passphrase. This passphrase is used to unlock the private key locally - the private key, nor the password, is never sent over the network.</p>
+<p>A private key, public key, and authorized_users files should be present in your ~/.ssh directory once you generate an ssh key pair as mentioned above. The server will automatically challenge the private key in this location when the request to connect is sent.</p>
+<p>Copying the public key to the remote server is the final step. Some servers have this information input online (GitHub, FutureGrid). Otherwise, the contents of the newly generated public key, stored within id_rsa.pub, should be copied into the authorized_keys file within the remote machine (usually located at ~/.ssh/authorized_keys&#8221;).</p>
+<p>Sources:
+.. _Digital Ocean: <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys&#8211;2</a></p>
+<p>(image: <a class="reference external" href="http://en.clipart-fr.com/data/icons/set_04/icones_01776.png">http://en.clipart-fr.com/data/icons/set_04/icones_01776.png</a>)</p>
+</div>
+</div>
+</div>
+<div class="section" id="using-ssh-keys">
+<span id="s-using-ssh"></span><h1>2.7.4. Using SSH keys<a class="headerlink" href="#using-ssh-keys" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Page Contents</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#using-ssh-from-windows" id="id2">Using SSH from Windows</a></li>
+<li><a class="reference internal" href="#generate-a-ssh-key" id="id3">Generate a SSH key</a></li>
+<li><a class="reference internal" href="#add-or-replace-passphrase-for-an-already-generated-key" id="id4">Add or Replace Passphrase for an Already Generated Key</a></li>
+<li><a class="reference internal" href="#upload-the-key-to-the-futuregrid-portal" id="id5">Upload the key to the FutureGrid Portal</a></li>
+<li><a class="reference internal" href="#testing-your-ssh-key" id="id6">Testing your ssh key</a></li>
+<li><a class="reference internal" href="#testing-your-ssh-key-for-hotel" id="id7">Testing your ssh key for Hotel</a></li>
+</ul>
+</div>
+<div class="last admonition hint">
+<p class="first admonition-title">Hint</p>
+<p><img alt="info-image" src="tools/os/images/glyphicons_195_circle_info.png" /></p>
+<p class="last">If you do not know what ssh is we recommend that you <a class="reference external" href="http://openssh.com/manual.html">read up on
+it</a> .  However, the simple
+material presented here will help you getting started quickly on
+FutureGrid.</p>
+</div>
+</div>
+<p>To access the various FutureGrid resources, you need to provide a public
+ssh key to FutureGrid.  We explain how to generate a ssh
+key, upload it to the FutureGrid portal and log onto the resources. This
+manual covers both UNIX and Windows Users.</p>
+<div class="section" id="using-ssh-from-windows">
+<span id="s-using-ssh-windows"></span><h2><a class="toc-backref" href="#id2">2.7.4.1. Using SSH from Windows</a><a class="headerlink" href="#using-ssh-from-windows" title="Permalink to this headline">¶</a></h2>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last"><img alt="info-image" src="tools/os/images/glyphicons_195_circle_info.png" /> For Linux users, please skip to the section <a class="reference internal" href="#s-ssh-generate"><span class="std std-ref">Generate a SSH key</span></a></p>
+</div>
+<p>Windows users need to have some special software to be able to use the
+SSH commands. If you have one that you are comfortable with and know
+how to setup key pairs and access the contents of your public key,
+please feel free to use it.
+The most popular software making ssh clients available to Windows
+users include</p>
+<ul class="simple">
+<li><a class="reference external" href="http://cygwin.com/install.html">cygwin</a></li>
+<li><a class="reference external" href="http://the.earth.li/~sgtatham/putty/0.62/htmldoc/">putty</a></li>
+<li>or installing a <a class="reference external" href="http://cygwin.com/install.html">virtualiztion software</a> and running Linux virtual
+machine on your Windows OS and using that</li>
+</ul>
+<p>For a real quick start we recommend you use Cygwin (Linux-like environment for Windows)
+because it will ease your experience with FutureGrid and provides you
+with a command shell that is Linux like. If you have cygwin already
+installed, please use it, but make sure you have ssh installed. If
+not, we have made it even easier for you as we prepared a special
+Cygwin version that is ready to use. Once you have installed it, you
+can follow the same instructions as given in the rest of the sections
+presented to access FutureGrid from ssh. You can install cygwin it with the
+following simple steps.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="60%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Step</th>
+<th class="head">Description</th>
+<th class="head">Supporting Screenshot</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Step 1</td>
+<td>Download Cygwin from our Portal&nbsp;<a class="reference external" href="https://portal.futuregrid.org/sites/default/files/cygwin.zip">https://portal.futuregrid.org/sites/default/files/cygwin.zip</a>.</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Step 2</td>
+<td>Uncompress the file.</td>
+<td><a class="reference internal" href="images/cygwim1.png"><img alt="image21" src="images/cygwim1.png" style="width: 200px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Step 3</td>
+<td>Execute the file the &#8216;Windows Batch File&#8217; called Cygwin.bat</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Step 4</td>
+<td>You may get a warning. Click in the Run button</td>
+<td><a class="reference internal" href="images/cygwin2.png"><img alt="image22" src="images/cygwin2.png" style="width: 200px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Step 5</td>
+<td>You get a Linux-like terminal that will allow you to continue
+with this manual. Hint: When showing examples of commands, the $ symbol precedes the
+actual command. So, the other lines are the output obtained after
+executing the command.</td>
+<td><a class="reference internal" href="images/cygwinfirst.png"><img alt="image23" src="images/cygwinfirst.png" style="width: 200px;" /></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="generate-a-ssh-key">
+<span id="s-ssh-generate"></span><h2><a class="toc-backref" href="#id3">2.7.4.2. Generate a SSH key</a><a class="headerlink" href="#generate-a-ssh-key" title="Permalink to this headline">¶</a></h2>
+<div class="sidebar">
+<p class="first sidebar-title"><img alt="info-image" src="tools/os/images/glyphicons_195_circle_info.png" /> Hint</p>
+<p class="last">In case you do not want to type in al the tyme your password,
+please learn about ssh-agent and ssh-add.</p>
+</div>
+<p>First we must generate a ssh key with the tool <a class="reference external" href="http://linux.die.net/man/1/ssh-keygen">ssh-keygen</a>. This program is commonly
+available on most UNIX systems (this includes Cygwin if you installed
+the ssh module or use our pre-generated cygwin executable). It will
+ask you for the location and name of the new key. It will also ask you
+for a passphrase, which you <strong>MUST</strong> provide. We have
+seen advise by teachers and teaching assistants to not use
+passphrases: this is <strong>WRONG</strong> as it allows someone that gains access
+to your computer to also gain access to all resources that have the
+public key. Also, please use a strong passphrase to protect it appropriately.
+We recommend using the default location ~/.ssh/ and the
+default name id_rsa. If you already have a key with a passphrase, you
+naturally can reuse it, and skip this section. Otherwise, please
+continue. To generate the key, please type:</p>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">C</span> <span class="n">localname</span><span class="nd">@indiana</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
+<p>This command requires the interaction of the user. The first question is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="n">key</span> <span class="p">(</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">localname</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>We recommend you use the default. To do so, just press the enter key. In
+case you already have a ssh key in your machine, you can skip this whole
+section or use a different file name.</p>
+<div class="sidebar">
+<p class="first sidebar-title"><img alt="info-image" src="tools/os/images/glyphicons_195_circle_info.png" /> Hint</p>
+<p class="last">Please note that your <em>localname</em> is the username on
+your computer and may be different from your <em>portalusername</em>.</p>
+</div>
+<p>The second and third question is to protect your ssh key with a
+passphrase. This passphrase will protect your key because you need to
+type it when you want to use it. Thus, you can either type a
+passphrase or press enter to leave it without passphrase. To avoid
+security problems, you <strong>MUST</strong> chose a passphrase. Make sure to not
+just type return for an empty passphrase:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>and:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="n">again</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>If executed correctly, you will see some output similar to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Generating</span> <span class="n">public</span><span class="o">/</span><span class="n">private</span> <span class="n">rsa</span> <span class="n">key</span> <span class="n">pair</span><span class="o">.</span>
+<span class="n">Enter</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="n">key</span> <span class="p">(</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">localname</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">):</span>
+<span class="n">Enter</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">):</span>
+<span class="n">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="n">again</span><span class="p">:</span>
+<span class="n">Your</span> <span class="n">identification</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="ow">in</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">localname</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span>
+<span class="n">Your</span> <span class="n">public</span> <span class="n">key</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="ow">in</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">localname</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span><span class="o">.</span>
+<span class="n">The</span> <span class="n">key</span> <span class="n">fingerprint</span> <span class="ow">is</span><span class="p">:</span>
+<span class="mi">34</span><span class="p">:</span><span class="mi">87</span><span class="p">:</span><span class="mi">67</span><span class="p">:</span><span class="n">ea</span><span class="p">:</span><span class="n">c2</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="n">ee</span><span class="p">:</span><span class="n">c2</span><span class="p">:</span><span class="mi">81</span><span class="p">:</span><span class="n">d2</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">84</span><span class="p">:</span><span class="n">b1</span><span class="p">:</span><span class="mi">3</span><span class="n">e</span><span class="p">:</span><span class="mi">05</span><span class="p">:</span><span class="mi">59</span> <span class="n">localname</span><span class="nd">@indiana</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">The</span> <span class="n">key</span><span class="s1">&#39;s randomart image is::</span>
+
+<span class="o">+--</span><span class="p">[</span> <span class="n">RSA</span> <span class="mi">2048</span><span class="p">]</span><span class="o">----+</span>
+<span class="o">|.+...</span><span class="n">Eo</span><span class="o">=</span> <span class="o">.</span>       <span class="o">|</span>
+<span class="o">|</span> <span class="o">..=.</span><span class="n">o</span> <span class="o">+</span> <span class="n">o</span> <span class="o">+</span><span class="n">o</span>    <span class="o">|</span>
+<span class="o">|</span><span class="n">O</span><span class="o">.</span>  <span class="n">o</span> <span class="n">o</span> <span class="o">+.</span><span class="n">o</span>      <span class="o">|</span>
+<span class="o">|</span> <span class="o">=</span> <span class="o">.</span>   <span class="o">.</span> <span class="o">.</span>       <span class="o">|</span>
+<span class="o">+-----------------+</span>
+</pre></div>
+</div>
+<p>Once, you have generated your key, you should have them in the .ssh
+directory. You can chek it by</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<p>If everything is normal, you will see something like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">rsa</span> <span class="n">AAAAB3NzaC1yc2EAAAADAQABAAABAQCXJH2iG2FMHqC6T</span><span class="o">/</span><span class="n">U7uB8kt6KlRh4kUOjgw9sc4Uu</span><span class="o">+</span><span class="n">Uwe</span><span class="o">/</span><span class="n">EwD0wk6CBQMB</span><span class="o">+</span><span class="n">HKb9upvCRW</span><span class="o">/</span><span class="mi">851</span><span class="n">UyRUagtlhgythkoamyi0VvhTVZhj61pTdhyl1t8hlkoL19JVnVBPP5kIN3wVyNAJjYBrAUNW4dXKXtmfkXp98T3OW4mxAtTH434MaT</span><span class="o">+</span><span class="n">QcPTcxims</span><span class="o">/</span><span class="n">hwsUeDAVKZY7UgZhEbiExxkejtnRBHTipi0W03W05TOUGRW7EuKf</span><span class="o">/</span><span class="mi">4</span><span class="n">ftNVPilCO4DpfY44NFG1xPwHeimUk</span><span class="o">+</span><span class="n">t9h48pBQj16FrUCp0rS02Pj</span><span class="o">+</span><span class="mi">4</span><span class="o">/</span><span class="mi">9</span><span class="n">dNeS1kmNJu5ZYS8HVRhvuoTXuAY</span><span class="o">/</span><span class="n">UVcynEPUegkp</span><span class="o">+</span><span class="n">qYnR</span> <span class="n">user</span><span class="nd">@myemail</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-or-replace-passphrase-for-an-already-generated-key">
+<h2><a class="toc-backref" href="#id4">2.7.4.3. Add or Replace Passphrase for an Already Generated Key</a><a class="headerlink" href="#add-or-replace-passphrase-for-an-already-generated-key" title="Permalink to this headline">¶</a></h2>
+<p>In case you need to change your change passphrase, you can simply run
+“ssh-keygen -p” command. Then specify the location of your current key,
+and input (old and) new passphrases. There is no need to re-generate
+keys:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">p</span>
+</pre></div>
+</div>
+<p>You will see the following output once you have completed that step:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">the</span> <span class="n">key</span> <span class="ow">is</span> <span class="p">(</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">localname</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">):</span>
+<span class="n">Enter</span> <span class="n">old</span> <span class="n">passphrase</span><span class="p">:</span>
+<span class="n">Key</span> <span class="n">has</span> <span class="n">comment</span> <span class="s1">&#39;/home/localname/.ssh/id_rsa&#39;</span>
+<span class="n">Enter</span> <span class="n">new</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">):</span>
+<span class="n">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="n">again</span><span class="p">:</span>
+<span class="n">Your</span> <span class="n">identification</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="k">with</span> <span class="n">the</span> <span class="n">new</span> <span class="n">passphrase</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="upload-the-key-to-the-futuregrid-portal">
+<h2><a class="toc-backref" href="#id5">2.7.4.4. Upload the key to the FutureGrid Portal</a><a class="headerlink" href="#upload-the-key-to-the-futuregrid-portal" title="Permalink to this headline">¶</a></h2>
+<p>Next you need to upload the key to the portal. You must be logged into the portal to do so.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="60%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Step</th>
+<th class="head">Description</th>
+<th class="head">Supporting Screensho</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Step 1</td>
+<td>Log into the portal</td>
+<td><a class="reference internal" href="images/portalLogin_0.png"><img alt="image25" src="images/portalLogin_0.png" style="width: 200px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Step 2</td>
+<td>Click in the &#8220;ssh key&#8221; button. or go directly to <a class="reference external" href="https://portal.futuregrid.org/my/ssh-keys">https://portal.futuregrid.org/my/ssh-keys</a></td>
+<td><a class="reference internal" href="images/portalsshkey.png"><img alt="image26" src="images/portalsshkey.png" style="width: 200px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Step 3</td>
+<td>Click in the &#8220;add a public key&#8221; link.</td>
+<td><a class="reference internal" href="images/portalclikaddkey_0.png"><img alt="image27" src="images/portalclikaddkey_0.png" style="width: 200px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>Step 4</td>
+<td>Paste your ssh key into the box marked Key. Use a text editor
+to open the “id_rsa.pub”. Copy the entire contents of this file
+into the ssh key field as part of your profile
+information. Many errors are introduced by users in this step
+as they do not paste and copy correctly.</td>
+<td><a class="reference internal" href="images/portalkeypaste_0.png"><img alt="image28" src="images/portalkeypaste_0.png" style="width: 200px;" /></a></td>
+</tr>
+<tr class="row-even"><td>Step 5</td>
+<td>Click the submit button. <strong>IMPORTANT</strong>: Leave the Title field blank.
+Make sure that when you paste your key, it does not contain
+newlines or carriage returns that may have been introduced by
+incorrect pasting and copying. If so, please remove them.</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>At this point you have uploaded your key. However you will still need
+to wait till all accounts have been set up to use the key, or if you
+did not have an account till it has been created by an
+administrator. Please, check your email for further updates. You can
+also refresh this page and see if the boxes in your account status
+information are all green. Than you can continue.</p>
+</div>
+<div class="section" id="testing-your-ssh-key">
+<h2><a class="toc-backref" href="#id6">2.7.4.5. Testing your ssh key</a><a class="headerlink" href="#testing-your-ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>If you have had no FutureGrid
+account before, you need to wait for up to two busisiness days so we
+can verify your identity and create the account. SO please wait.
+Otherwise, tseisting your new key is almost instanteneously on india.
+For other clusters like Hotel, it can take
+around 10 minutes to update the ssh keys.</p>
+<p>To log into india simply type the usual ssh command such as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh portalname@india.futuregrid.org
+</pre></div>
+</div>
+<p>The first time you ssh into a machine you will see a message like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>The authenticity of host &#39;india.futuregrid.org (149.165.148.5)&#39; can&#39;t be established.
+RSA key fingerprint is f8:96:15:b7:21:eb:64:92:6c:de:e0:79:f3:fb:86:dd.
+Are you sure you want to continue connecting (yes/no)? yes
+</pre></div>
+</div>
+<p>You have to type yes and press enter. Than you will be logging into
+india. Other FutureGrid machines can be reached in the same
+fashion. Just replave the name india, with the appropriate FG resource name.</p>
+</div>
+<div class="section" id="testing-your-ssh-key-for-hotel">
+<h2><a class="toc-backref" href="#id7">2.7.4.6. Testing your ssh key for Hotel</a><a class="headerlink" href="#testing-your-ssh-key-for-hotel" title="Permalink to this headline">¶</a></h2>
+<p>After uploading your ssh key, it can take around 30 minutes to update
+the ssh keys of Hotel. So, if you were able to log onto India, you have
+set up properly your ssh key. So, after a while you will be able to log
+onto Hotel.</p>
+<p>If you placed the ssh key in the default location:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh -A portalname@hotel.futuregrid.org
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last"><img alt="info-image" src="tools/os/images/glyphicons_195_circle_info.png" /> the presence of the -A argument above is required for Nimbus.</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last"><img alt="info-image" src="tools/os/images/glyphicons_195_circle_info.png" /> If you are asked for a <strong>password</strong> when trying to ssh onto
+Hotel, do <strong>NOT</strong> type any password. This means that your ssh key is
+not updated yet. You need to wait a bit more.</p>
+</div>
+<p>See also
+<a class="reference external" href="https://github.com/cloudmesh/introduction_to_cloud_computing-old/blob/master/docs/source/accounts/ssh.rst">https://github.com/cloudmesh/introduction_to_cloud_computing-old/blob/master/docs/source/accounts/ssh.rst</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sh.html" class="btn btn-neutral float-right" title="2.7.5. Shell" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="linux.html" class="btn btn-neutral" title="2.7.1. Linux and Shell Scripting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

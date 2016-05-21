@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>vagrant &mdash; Cloudmesh Tools Primer 0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Cloudmesh Tools Primer
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">A. Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../class/index.html">1. Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">2. Tools</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Cloudmesh Tools Primer</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+    <li>vagrant</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/tools/iaas/vagrant.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vagrant">
+<h1>vagrant<a class="headerlink" href="#vagrant" title="Permalink to this headline">¶</a></h1>
+<p>Install:
+<a class="reference external" href="https://www.vagrantup.com/downloads.html">https://www.vagrantup.com/downloads.html</a></p>
+<p><a class="reference external" href="https://www.vagrantup.com/about.html">https://www.vagrantup.com/about.html</a>:</p>
+<p>&#8220;Vagrant is a tool for building complete development
+environments. With an easy-to-use workflow and focus on automation,
+Vagrant lowers development environment setup time, increases
+development/production parity, and makes the &#8220;works on my machine&#8221;
+excuse a relic of the past.&#8221;</p>
+<pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">mkdir vagrant_getting_started</span>
+<span class="prompt1"><span class="nb">cd</span> vagrant_getting_started</span>
+<span class="prompt1">vagrant init</span>
+</pre><p>Creates Vagrantfile</p>
+<pre class="highlight"><span class="prompt1">vagrant init hashicorp/precise64</span>
+<span class="prompt1">vagrant up</span>
+<span class="prompt1">vagrant ssh</span>
+<span class="prompt1">vagrant destroy</span>
+<span class="prompt1"></span>
+<span class="prompt1">vagrant box add hashicorp/precise64</span>
+</pre><p>By default, Vagrant shares your project directory (remember, that is
+the one with the Vagrantfile) to the /vagrant directory in your guest
+machine.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span> <span class="n">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;hashicorp/precise64&quot;</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<p>List of boxes:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://atlas.hashicorp.com/boxes/search">https://atlas.hashicorp.com/boxes/search</a></li>
+</ul>
+<div class="section" id="shell-to-provision">
+<h2>shell to provision<a class="headerlink" href="#shell-to-provision" title="Permalink to this headline">¶</a></h2>
+<p>We will just setup Apache for our basic project, and we will do so
+using a shell script. Create the following shell script and save it as
+bootstrap.sh in the same directory as your Vagrantfile:</p>
+<p>#!/usr/bin/env bash</p>
+<p>apt-get update
+apt-get install -y apache2
+if ! [ -L /var/www ]; then</p>
+<blockquote>
+<div>rm -rf /var/www
+ln -fs /vagrant /var/www</div></blockquote>
+<p>fi
+Next, we configure Vagrant to run this shell script when setting up our machine. We do this by editing the Vagrantfile, which should now look like this:</p>
+<dl class="docutils">
+<dt>Vagrant.configure(&#8220;2&#8221;) do <a href="#id1"><span class="problematic" id="id2">|config|</span></a></dt>
+<dd>config.vm.box = &#8220;hashicorp/precise64&#8221;
+config.vm.provision :shell, path: &#8220;bootstrap.sh&#8221;
+config.vm.network :forwarded_port, guest: 80, host: 4567</dd>
+</dl>
+<p>end</p>
+<p>Once the machine is running again, load <a class="reference external" href="http://127.0.0.1:4567">http://127.0.0.1:4567</a></p>
+</div>
+<div class="section" id="ansible">
+<h2>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.vagrantup.com/docs/provisioning/ansible.html">https://www.vagrantup.com/docs/provisioning/ansible.html</a></li>
+<li>Install</li>
+</ul>
+<p><a class="reference external" href="http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine">http://docs.ansible.com/ansible/intro_installation.html#installing-the-control-machine</a></p>
+<ul class="simple">
+<li>OSX:
+<a class="reference external" href="http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip">http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-pip</a></li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="p">(</span><span class="mf">1.</span><span class="o">.</span><span class="n">N</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="n">do</span> <span class="o">|</span><span class="n">machine_id</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">define</span> <span class="s2">&quot;machine#</span><span class="si">{machine_id}</span><span class="s2">&quot;</span> <span class="n">do</span> <span class="o">|</span><span class="n">machine</span><span class="o">|</span>
+    <span class="n">machine</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="s2">&quot;machine#</span><span class="si">{machine_id}</span><span class="s2">&quot;</span>
+    <span class="n">machine</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="n">ip</span><span class="p">:</span> <span class="s2">&quot;192.168.77.#{20+machine_id}&quot;</span>
+
+    <span class="c1"># Only execute once the Ansible provisioner,</span>
+    <span class="c1"># when all the machines are up and ready.</span>
+    <span class="k">if</span> <span class="n">machine_id</span> <span class="o">==</span> <span class="n">N</span>
+      <span class="n">machine</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="p">:</span><span class="n">ansible</span> <span class="n">do</span> <span class="o">|</span><span class="n">ansible</span><span class="o">|</span>
+        <span class="c1"># Disable default limit to connect to all the machines</span>
+        <span class="n">ansible</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
+        <span class="n">ansible</span><span class="o">.</span><span class="n">playbook</span> <span class="o">=</span> <span class="s2">&quot;playbook.yml&quot;</span>
+      <span class="n">end</span>
+    <span class="n">end</span>
+  <span class="n">end</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span> <span class="n">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+
+  <span class="c1">#</span>
+  <span class="c1"># Run Ansible from the Vagrant Host</span>
+  <span class="c1">#</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="s2">&quot;ansible&quot;</span> <span class="n">do</span> <span class="o">|</span><span class="n">ansible</span><span class="o">|</span>
+    <span class="n">ansible</span><span class="o">.</span><span class="n">playbook</span> <span class="o">=</span> <span class="s2">&quot;playbook.yml&quot;</span>
+  <span class="n">end</span>
+
+<span class="n">end</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li></li>
+</ul>
+<p><a class="reference external" href="https://github.com/mitchellh/vagrant/pull/5765#issuecomment-120247738">https://github.com/mitchellh/vagrant/pull/5765#issuecomment-120247738</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">machine1</span> <span class="n">ansible_ssh_host</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">77.21</span>
+<span class="n">machine2</span> <span class="n">ansible_ssh_host</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">77.22</span>
+<span class="n">machine3</span> <span class="n">ansible_ssh_host</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">77.23</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">VAGRANT_VM_PROVIDER</span> <span class="o">=</span> <span class="s2">&quot;virtualbox&quot;</span>
+<span class="n">ANSIBLE_RAW_SSH_ARGS</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="p">(</span><span class="mf">1.</span><span class="o">.</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="n">do</span> <span class="o">|</span><span class="n">machine_id</span><span class="o">|</span>
+  <span class="n">ANSIBLE_RAW_SSH_ARGS</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;-o IdentityFile=#</span><span class="si">{ENV[&quot;VAGRANT_DOTFILE_PATH&quot;]}</span><span class="s2">/machines/machine#</span><span class="si">{machine_id}</span><span class="s2">/#</span><span class="si">{VAGRANT_VM_PROVIDER}</span><span class="s2">/private_key&quot;</span>
+<span class="n">end</span>
+
+<span class="p">(</span><span class="mf">1.</span><span class="o">.</span><span class="n">N</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="n">do</span> <span class="o">|</span><span class="n">machine_id</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">define</span> <span class="s2">&quot;machine#</span><span class="si">{machine_id}</span><span class="s2">&quot;</span> <span class="n">do</span> <span class="o">|</span><span class="n">machine</span><span class="o">|</span>
+    <span class="n">machine</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="s2">&quot;machine#</span><span class="si">{machine_id}</span><span class="s2">&quot;</span>
+    <span class="n">machine</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="s2">&quot;private_network&quot;</span><span class="p">,</span> <span class="n">ip</span><span class="p">:</span> <span class="s2">&quot;192.168.77.#{20+machine_id}&quot;</span>
+    <span class="k">if</span> <span class="n">machine_id</span> <span class="o">==</span> <span class="n">N</span>
+      <span class="n">machine</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="p">:</span><span class="n">ansible</span> <span class="n">do</span> <span class="o">|</span><span class="n">ansible</span><span class="o">|</span>
+        <span class="n">ansible</span><span class="o">.</span><span class="n">playbook</span> <span class="o">=</span> <span class="s2">&quot;example.yml&quot;</span>
+        <span class="n">ansible</span><span class="o">.</span><span class="n">limit</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span>
+        <span class="n">ansible</span><span class="o">.</span><span class="n">inventory_path</span> <span class="o">=</span> <span class="s2">&quot;static_inventory&quot;</span>
+        <span class="n">ansible</span><span class="o">.</span><span class="n">raw_ssh_args</span> <span class="o">=</span> <span class="n">ANSIBLE_RAW_SSH_ARGS</span>
+      <span class="n">end</span>
+    <span class="n">end</span>
+
+  <span class="n">end</span>
+<span class="n">end</span>
+</pre></div>
+</div>
+<p>end</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

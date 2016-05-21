@@ -9,3 +9,4 @@ Class
    :numbered:
 
    mistakes
+   report
