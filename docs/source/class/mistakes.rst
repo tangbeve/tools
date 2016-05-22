@@ -156,3 +156,107 @@ Make sure you typed in your password correctly. Double check CAPS LOCK
 
 Do not use passwords that are easy to guess
 
+.. graphviz::
+
+   digraph {
+      node [shape=box];
+
+      
+      key [label="Laptop\nid_rsa.pub"]
+
+      
+      laptop -> key -> "github";
+      key -> "portal.futuresystems.org";
+      "portal.futuresystems.org" -> india;
+      key -> kilo;
+      key -> chameleon;
+      kilo -> vm1 [dir=none]
+      kilo -> vm2 [dir=none]
+      kilo -> vm3 [dir=none]
+      key -> vm1
+      key -> vm2
+      key -> vm3      
+   }
+
+
+.. graphviz::
+
+   digraph {
+      node [shape=box];
+
+      key [label="Laptop\nid_rsa.pub" color=green]
+
+      vm1_key [label="vm_1\n id_rsa.pub" color=blue]
+      vm2_key [label="vm_2\n id_rsa.pub" color=orange]
+      vm3_key [label="vm_3\n id_rsa.pub" color=purple]
+      
+      laptop -> key -> kilo;
+      kilo -> vm1 [dir=none]
+      kilo -> vm2 [dir=none]
+      kilo -> vm3 [dir=none]
+      key -> vm1 -> "vm_1\n id_rsa" -> vm1_key   
+      key -> vm2 -> "vm_2\n id_rsa" -> vm2_key
+      key -> vm3 -> "vm_3\n id_rsa" -> vm3_key
+   }
+
+
+.. graphviz::
+
+   digraph {
+      node [shape=box];
+
+      key [label="Laptop\nid_rsa.pub" color=green]
+
+
+      vm1_key [label="vm_1\n id_rsa.pub" color=blue]
+      vm2_key [label="vm_2\n id_rsa.pub" color=orange]
+      vm3_key [label="vm_3\n id_rsa.pub" color=purple]
+            
+      laptop -> key -> "laptop\n~/authorized_keys";
+      key -> kilo 
+      kilo -> vm1 [dir=none]
+      kilo -> vm2 [dir=none]
+      kilo -> vm3 [dir=none]
+      key -> vm1 -> "vm_1\n id_rsa" -> vm1_key -> "laptop\n~/authorized_keys"; 
+      key -> vm2 -> "vm_2\n id_rsa" -> vm2_key -> "laptop\n~/authorized_keys";
+      key -> vm3 -> "vm_3\n id_rsa" -> vm3_key -> "laptop\n~/authorized_keys";
+      
+   }
+
+.. graphviz::
+
+   digraph {
+      node [shape=box];
+
+
+      vm1 [color=blue]
+      vm2 [color=orange]
+      vm3 [color=purple]
+      
+      
+      laptop -> "~/authorized_keys cp to ~/.ssh" -> vm1
+      "~/authorized_keys cp to ~/.ssh" -> vm2
+      "~/authorized_keys cp to ~/.ssh" -> vm3
+      
+   }
+
+.. graphviz::
+
+   digraph {
+      node [shape=box];
+
+      key [label="Laptop\nid_rsa.pub"]
+      vm1 [color=blue]
+      vm2 [color=orange]
+      vm3 [color=purple]
+
+      laptop -> key
+      key -> vm1
+      key -> vm2
+      key -> vm3
+
+      vm1 -> vm2 -> vm3 -> vm1 [dir=both]
+   }
+
+   
+   
