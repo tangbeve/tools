@@ -87,7 +87,8 @@ automation with scripts which is one of the primary educational class
 goals.
 
 
-Please be aware that reviewers will deduct points if either of these 
+Please be aware that reviewers will deduct points if either of these
+do not work as expected. 
 
 
 Information Management
