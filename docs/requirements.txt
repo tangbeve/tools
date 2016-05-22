@@ -1,1 +1,3 @@
-pelican-fontawesome
+python-sphinx
+sphinx_bootstrap_theme
+sphinx_rtd_theme

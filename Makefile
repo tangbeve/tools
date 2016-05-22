@@ -17,12 +17,17 @@ doc:
 epub: 
 	cd docs; make epub
 
+pdf: 
+	cd docs; make latexpdf
+
 publish:
 	ghp-import -n -p docs/build/html
 
 view:
 	$(BROWSER) docs/build/html/index.html
 
+watch:
+	watchmedo shell-command --patterns="*.rst" --recursive --command='make doc'
 
 ######################################################################
 # CLEANING

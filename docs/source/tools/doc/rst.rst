@@ -248,3 +248,81 @@ Todo
       .. todo:: an example
 
 .. todo:: an example
+
+Not quite WYSIWYG
+-----------------
+
+Often you may want to observe the changes that you make in an RST
+document upon saving it while automating the process of calling the
+sphinx make process and displaying the result.
+
+To accomplish this two tools will help you Watchdog and Atom.
+
+
+Watchdog
+^^^^^^^^^
+
+Watchdog is a small python script that watches changes on the file
+system and can execute a shell command based on a change. Together
+with a firefox plugin this allows you to view the changes in your
+sphinx document. NAturally you could also create via pandoc a PDF
+version and use a PDF broswer such as skim to view the changes in the
+resulting document.
+
+::
+
+  pip install watchdog
+
+::
+
+  make doc
+
+
+Watch changes with your browser in a file with
+
+* https://addons.mozilla.org/en-US/firefox/addon/auto-reload/
+
+Let us assume you replicate our documentation setup and use the
+Makefile included in the git repository.
+
+Than you can simply say
+
+::
+
+   make watch
+
+in the directory. You can than edit the file and if you look at it
+with firefox, you will see the changes. For larger sites this may take
+some time.
+
+pandoc and skim
+---------------
+
+A very simple approach is also to use the autoreload feature from skim
+which is a pdf previewer. Let us assume you have a file called
+`filename.rst`. The command 
+
+.. prompt:: bash
+   
+   watchmedo shell-command --patterns="*.rst" --recursive --command='pandoc filename.rst -o filename.pdf'
+
+will create a pdf file that you can view with skim. Skim deals much
+better with PDF reloads than firefox and chrome or the preview comming
+natively with OSX.
+
+However as pandoc does not deal with the sphinx plugins you may not be
+able to see everything in case you rely on sphinx.  Naturally instead
+of PDF you can generate other formats such as html with pandoc and use
+aalternative borwsers.  The combination of `skim` and `pandoc` is
+typically very fast.
+
+Atom
+^^^^
+
+Atom is a simple editor available on all platforms. It can be extended
+with a RestructuredText plugin. ONce installed, and you are in an RST
+document you can preview the new changes while pressing
+`CTRL-SHIFT-r`.
+
+Atom can be downloaded form: https://atom.io/
+
