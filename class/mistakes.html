@@ -290,6 +290,91 @@ not to do that</li>
 code. Instead use configuration files and secure them appropriately</p>
 <p>Make sure you typed in your password correctly. Double check CAPS LOCK</p>
 <p>Do not use passwords that are easy to guess</p>
+<img src="../_images/graphviz-f9e7810286b883f93d17ebf3458d9f65149e9e23.png" alt="digraph {
+   node [shape=box];
+
+
+   key [label=&quot;Laptop\nid_rsa.pub&quot;]
+
+
+   laptop -&gt; key -&gt; &quot;github&quot;;
+   key -&gt; &quot;portal.futuresystems.org&quot;;
+   &quot;portal.futuresystems.org&quot; -&gt; india;
+   key -&gt; kilo;
+   key -&gt; chameleon;
+   kilo -&gt; vm1 [dir=none]
+   kilo -&gt; vm2 [dir=none]
+   kilo -&gt; vm3 [dir=none]
+   key -&gt; vm1
+   key -&gt; vm2
+   key -&gt; vm3
+}" />
+<img src="../_images/graphviz-ef2ea9de4f9fdacb721cb4a47b6ea38e17cfdd4b.png" alt="digraph {
+   node [shape=box];
+
+   key [label=&quot;Laptop\nid_rsa.pub&quot; color=green]
+
+   vm1_key [label=&quot;vm_1\n id_rsa.pub&quot; color=blue]
+   vm2_key [label=&quot;vm_2\n id_rsa.pub&quot; color=orange]
+   vm3_key [label=&quot;vm_3\n id_rsa.pub&quot; color=purple]
+
+   laptop -&gt; key -&gt; kilo;
+   kilo -&gt; vm1 [dir=none]
+   kilo -&gt; vm2 [dir=none]
+   kilo -&gt; vm3 [dir=none]
+   key -&gt; vm1 -&gt; &quot;vm_1\n id_rsa&quot; -&gt; vm1_key
+   key -&gt; vm2 -&gt; &quot;vm_2\n id_rsa&quot; -&gt; vm2_key
+   key -&gt; vm3 -&gt; &quot;vm_3\n id_rsa&quot; -&gt; vm3_key
+}" />
+<img src="../_images/graphviz-5a0dbbefe199e9114ce1fa43a4b3679da12d0063.png" alt="digraph {
+   node [shape=box];
+
+   key [label=&quot;Laptop\nid_rsa.pub&quot; color=green]
+
+
+   vm1_key [label=&quot;vm_1\n id_rsa.pub&quot; color=blue]
+   vm2_key [label=&quot;vm_2\n id_rsa.pub&quot; color=orange]
+   vm3_key [label=&quot;vm_3\n id_rsa.pub&quot; color=purple]
+
+   laptop -&gt; key -&gt; &quot;laptop\n~/authorized_keys&quot;;
+   key -&gt; kilo
+   kilo -&gt; vm1 [dir=none]
+   kilo -&gt; vm2 [dir=none]
+   kilo -&gt; vm3 [dir=none]
+   key -&gt; vm1 -&gt; &quot;vm_1\n id_rsa&quot; -&gt; vm1_key -&gt; &quot;laptop\n~/authorized_keys&quot;;
+   key -&gt; vm2 -&gt; &quot;vm_2\n id_rsa&quot; -&gt; vm2_key -&gt; &quot;laptop\n~/authorized_keys&quot;;
+   key -&gt; vm3 -&gt; &quot;vm_3\n id_rsa&quot; -&gt; vm3_key -&gt; &quot;laptop\n~/authorized_keys&quot;;
+
+}" />
+<img src="../_images/graphviz-ac51eb55a5627d0025b070864e07d2f58a65507a.png" alt="digraph {
+   node [shape=box];
+
+
+   vm1 [color=blue]
+   vm2 [color=orange]
+   vm3 [color=purple]
+
+
+   laptop -&gt; &quot;~/authorized_keys cp to ~/.ssh&quot; -&gt; vm1
+   &quot;~/authorized_keys cp to ~/.ssh&quot; -&gt; vm2
+   &quot;~/authorized_keys cp to ~/.ssh&quot; -&gt; vm3
+
+}" />
+<img src="../_images/graphviz-b32162715f85fbef425876ab94caa8aa8bdfe19e.png" alt="digraph {
+   node [shape=box];
+
+   key [label=&quot;Laptop\nid_rsa.pub&quot;]
+   vm1 [color=blue]
+   vm2 [color=orange]
+   vm3 [color=purple]
+
+   laptop -&gt; key
+   key -&gt; vm1
+   key -&gt; vm2
+   key -&gt; vm3
+
+   vm1 -&gt; vm2 -&gt; vm3 -&gt; vm1 [dir=both]
+}" />
 </div>
 </div>
 </div>
