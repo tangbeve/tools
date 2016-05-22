@@ -39,7 +39,7 @@ the terminal preceeded by `git clone`:
 Now the `tools` directory will show up in the cloudmesh directory.
 Start PyCharm. If you have not yet created a Project, `Create New
 Project` and name it CLOUDMESH (In future you can just double click on
-it). Than uuse `File`->`Open` to open and add the repository to the
+it). Than uuse `File` -> `Open` to open and add the repository to the
 current project.
 
 You nee dto do some configurations to point to the right interpreter
@@ -50,7 +50,7 @@ just as RST editor. To compile your code you can type in the terminal
 
 .. prompt:: bash
 
-	    make doc.
+	    make doc
 
 To view the output, you can say
 
