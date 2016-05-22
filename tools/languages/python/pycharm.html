@@ -88,7 +88,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../cloudmesh/index.html">Cloudmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../devops/index.html">2.1. DevOps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">2.2. Docuumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">2.2. Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../iaas/index.html">2.3. Languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../management/index.html">2.4. Management</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.5. Languages</a><ul class="current">
@@ -163,6 +163,49 @@
             
   <div class="section" id="pycharm">
 <h1>2.5.1.1. PyCharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">¶</a></h1>
+<p>PyCharm is one of the easiest and comprehensive editors for Python. We
+recommend  tha YOu use PyCharm for developping your python
+programs. IT has build in support for github.</p>
+<p>Link: <a class="reference external" href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>
+Features: <a class="reference external" href="https://www.jetbrains.com/pycharm/features/">https://www.jetbrains.com/pycharm/features/</a></p>
+<p>From experience we found it is best to not use the workspace of
+pycharm, but instead clone your projects from github via the command
+line first and than open them. Let us assume you work on the cloudmesh
+project in github which has many repositories.</p>
+<p>To do this create a directory</p>
+<pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">mkdir -p ~/github/cloudmesh</span>
+<span class="prompt1"><span class="nb">cd</span> ~/github/cloudmesh</span>
+</pre><p>Next create a fork of one of its repositories, lets assume you like to
+work on this documentation and make improvements.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/cloudmesh/tools#fork-destination-box">https://github.com/cloudmesh/tools#fork-destination-box</a></li>
+</ul>
+<p>The repository will now be forked into your own github account and you
+can make modifications to it. Check out this new repository while
+saying <cite>clone or download</cite>. YOu will be presented with a popup in
+which you can see an https or an ssh link. You can copy either link
+(lets assume you use ssh) and copy it into your shell that you run in
+the terminal preceeded by <cite>git clone</cite>:</p>
+<pre class="highlight"><span class="prompt1">git@github.com:&lt;your github username&gt;/tools.git</span>
+</pre><p>Now the <cite>tools</cite> directory will show up in the cloudmesh directory.
+Start PyCharm. If you have not yet created a Project, <cite>Create New
+Project</cite> and name it CLOUDMESH (In future you can just double click on
+it). Than uuse <cite>File</cite> -&gt; <cite>Open</cite> to open and add the repository to the
+current project.</p>
+<p>You nee dto do some configurations to point to the right interpreter
+and other things, but its ready to use at this point.</p>
+<p>As this reporsitory does currently not include any code yo use pycharm
+just as RST editor. To compile your code you can type in the terminal</p>
+<pre class="highlight"><span class="prompt1">make doc</span>
+</pre><p>To view the output, you can say</p>
+<pre class="highlight"><span class="prompt1">make view</span>
+</pre><p>While using this method you will have a uniform setup many different
+project and edit the content with your favourite editor that is most
+suitable for the task.</p>
 </div>
 
 

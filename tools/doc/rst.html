@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../../index.html"/>
-        <link rel="up" title="2.2. Docuumentation" href="index.html"/>
+        <link rel="up" title="2.2. Documentation" href="index.html"/>
         <link rel="next" title="2.2.6. Sphinx" href="sphinx.html"/>
         <link rel="prev" title="2.2.4. Pandoc" href="pandoc.html"/> 
 
@@ -88,7 +88,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">2. Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../cloudmesh/index.html">Cloudmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../devops/index.html">2.1. DevOps</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Docuumentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2.2. Documentation</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="acm.html">2.2.1. Acm Templates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="emacs.html">2.2.2. Emacs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="latex.html">2.2.3. LaTeX</a></li>
@@ -102,6 +102,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#autorun">2.2.5.6. Autorun</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#hyperlinks">2.2.5.7. Hyperlinks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#todo">2.2.5.8. Todo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#not-quite-wysiwyg">2.2.5.9. Not quite WYSIWYG</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pandoc-and-skim">2.2.5.10. pandoc and skim</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sphinx.html">2.2.6. Sphinx</a></li>
@@ -148,7 +150,7 @@
       
           <li><a href="../index.html">2. Tools</a> &raquo;</li>
       
-          <li><a href="index.html">2.2. Docuumentation</a> &raquo;</li>
+          <li><a href="index.html">2.2. Documentation</a> &raquo;</li>
       
     <li>2.2.5. reStructuredText</li>
       <li class="wy-breadcrumbs-aside">
@@ -405,6 +407,68 @@ unique. for example if you place:</p>
 <div class="admonition-todo admonition" id="index-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">an example</p>
+</div>
+</div>
+<div class="section" id="not-quite-wysiwyg">
+<h2>2.2.5.9. Not quite WYSIWYG<a class="headerlink" href="#not-quite-wysiwyg" title="Permalink to this headline">¶</a></h2>
+<p>Often you may want to observe the changes that you make in an RST
+document upon saving it while automating the process of calling the
+sphinx make process and displaying the result.</p>
+<p>To accomplish this two tools will help you Watchdog and Atom.</p>
+<div class="section" id="watchdog">
+<h3>2.2.5.9.1. Watchdog<a class="headerlink" href="#watchdog" title="Permalink to this headline">¶</a></h3>
+<p>Watchdog is a small python script that watches changes on the file
+system and can execute a shell command based on a change. Together
+with a firefox plugin this allows you to view the changes in your
+sphinx document. NAturally you could also create via pandoc a PDF
+version and use a PDF broswer such as skim to view the changes in the
+resulting document.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">watchdog</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">doc</span>
+</pre></div>
+</div>
+<p>Watch changes with your browser in a file with</p>
+<ul class="simple">
+<li><a class="reference external" href="https://addons.mozilla.org/en-US/firefox/addon/auto-reload/">https://addons.mozilla.org/en-US/firefox/addon/auto-reload/</a></li>
+</ul>
+<p>Let us assume you replicate our documentation setup and use the
+Makefile included in the git repository.</p>
+<p>Than you can simply say</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">watch</span>
+</pre></div>
+</div>
+<p>in the directory. You can than edit the file and if you look at it
+with firefox, you will see the changes. For larger sites this may take
+some time.</p>
+</div>
+</div>
+<div class="section" id="pandoc-and-skim">
+<h2>2.2.5.10. pandoc and skim<a class="headerlink" href="#pandoc-and-skim" title="Permalink to this headline">¶</a></h2>
+<p>A very simple approach is also to use the autoreload feature from skim
+which is a pdf previewer. Let us assume you have a file called
+<cite>filename.rst</cite>. The command</p>
+<pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">watchmedo shell-command --patterns<span class="o">=</span><span class="s2">&quot;*.rst&quot;</span> --recursive --command<span class="o">=</span><span class="s1">&#39;pandoc filename.rst -o filename.pdf&#39;</span></span>
+</pre><p>will create a pdf file that you can view with skim. Skim deals much
+better with PDF reloads than firefox and chrome or the preview comming
+natively with OSX.</p>
+<p>However as pandoc does not deal with the sphinx plugins you may not be
+able to see everything in case you rely on sphinx.  Naturally instead
+of PDF you can generate other formats such as html with pandoc and use
+aalternative borwsers.  The combination of <cite>skim</cite> and <cite>pandoc</cite> is
+typically very fast.</p>
+<div class="section" id="atom">
+<h3>2.2.5.10.1. Atom<a class="headerlink" href="#atom" title="Permalink to this headline">¶</a></h3>
+<p>Atom is a simple editor available on all platforms. It can be extended
+with a RestructuredText plugin. ONce installed, and you are in an RST
+document you can preview the new changes while pressing
+<cite>CTRL-SHIFT-r</cite>.</p>
+<p>Atom can be downloaded form: <a class="reference external" href="https://atom.io/">https://atom.io/</a></p>
 </div>
 </div>
 </div>

@@ -9,7 +9,7 @@ adding other users keys
 put all keys into the authorized_keys file and distribute them on all vms by placing them at::
 
     ~/.ssh/authorized_keys
-	
+
 WARNING: before you do this you must make sure that all other keys such as the once created on the vm into the user account or the cc account are also copied into that file. If you just replace the
 file you may lose access if you forgot to include the appropriate keys, you may not recover form
 this if you overwrote the wrong keys.
@@ -150,7 +150,7 @@ What is SSH?
 ----------------------------------------------------------------------
 SSH, "Secure Shell," or "Secure Socket Shell" is an interface for UNIX based systems which allows for secure remote access to computers. SSH transfers are encrypted and secured using "ssh keys" and digital certificates.
 
-Sources: 
+Sources:
 	- http://searchsecurity.techtarget.com/definition/Secure-Shell
 	- http://en.wikipedia.org/wiki/Secure_Shell
 
@@ -160,7 +160,7 @@ One method of identifying and authorizing a connection to an SSH server involves
 
 How they work...
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-When seeking to connect to a system via SSH, one must generate an SSH-key pair: a private and public key. The private key is maintained on the local machine while the public key is shared with the machine to be connected with. 
+When seeking to connect to a system via SSH, one must generate an SSH-key pair: a private and public key. The private key is maintained on the local machine while the public key is shared with the machine to be connected with.
 
 When a user with a public/private key pair requests a connection, the server sends "a challenge." This challenge is decoded locally on the user's machine using the private key. Any information sent across the network is encrypted using the public key.
 
@@ -168,7 +168,7 @@ This process occurs behind the scenes: the user should not have to be more invol
 
 Sources:
 	- https://wiki.archlinux.org/index.php/SSH_Keys
-	
+
 Obtaining a key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -189,11 +189,7 @@ Sources:
 .. _Digital Ocean: https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
 
 
-
-
-
-
-(image: http://en.clipart-fr.com/data/icons/set_04/icones_01776.png)
+image: http://en.clipart-fr.com/data/icons/set_04/icones_01776.png
 
 
 .. _s-using-ssh:
@@ -224,7 +220,7 @@ manual covers both UNIX and Windows Users.
 Using SSH from Windows
 ----------------------------------------------------------------------
 
-.. hint:: |info-image| For Linux users, please skip to the section :ref:`s-ssh-generate` 
+.. hint:: |info-image| For Linux users, please skip to the section :ref:`s-ssh-generate`
 
 
 Windows users need to have some special software to be able to use the
@@ -232,7 +228,7 @@ SSH commands. If you have one that you are comfortable with and know
 how to setup key pairs and access the contents of your public key,
 please feel free to use it.
 The most popular software making ssh clients available to Windows
-users include 
+users include
 
 * `cygwin <http://cygwin.com/install.html>`__
 * `putty <http://the.earth.li/~sgtatham/putty/0.62/htmldoc/>`__
@@ -251,7 +247,7 @@ presented to access FutureGrid from ssh. You can install cygwin it with the
 following simple steps.
 
 
-.. list-table:: 
+.. list-table::
    :widths: 10 60 30
    :header-rows: 1
 
@@ -260,13 +256,13 @@ following simple steps.
      - Supporting Screenshot
    * - Step 1
      - Download Cygwin from our Portal \ `https://portal.futuregrid.org/sites/default/files/cygwin.zip <https://portal.futuregrid.org/sites/default/files/cygwin.zip>`__.
-     - 
+     -
    * - Step 2
      - Uncompress the file.
      - |image21|
    * - Step 3
      - Execute the file the 'Windows Batch File' called Cygwin.bat
-     - 
+     -
    * - Step 4
      - You may get a warning. Click in the Run button
      - |image22|
@@ -276,7 +272,7 @@ following simple steps.
        actual command. So, the other lines are the output obtained after
        executing the command.
      - |image23|
-     
+
 
 .. _s-ssh-generate:
 
@@ -297,7 +293,7 @@ for a passphrase, which you **MUST** provide. We have
 seen advise by teachers and teaching assistants to not use
 passphrases: this is **WRONG** as it allows someone that gains access
 to your computer to also gain access to all resources that have the
-public key. Also, please use a strong passphrase to protect it appropriately. 
+public key. Also, please use a strong passphrase to protect it appropriately.
 We recommend using the default location ~/.ssh/ and the
 default name id\_rsa. If you already have a key with a passphrase, you
 naturally can reuse it, and skip this section. Otherwise, please
@@ -311,13 +307,13 @@ Example::
 
 This command requires the interaction of the user. The first question is::
 
-    Enter file in which to save the key (/home/localname/.ssh/id_rsa): 
+    Enter file in which to save the key (/home/localname/.ssh/id_rsa):
 
 We recommend you use the default. To do so, just press the enter key. In
 case you already have a ssh key in your machine, you can skip this whole
 section or use a different file name.
 
-.. sidebar:: |info-image| Hint 
+.. sidebar:: |info-image| Hint
 
    Please note that your *localname* is the username on
    your computer and may be different from your *portalusername*.
@@ -340,7 +336,7 @@ and::
 If executed correctly, you will see some output similar to::
 
     Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/localname/.ssh/id_rsa): 
+    Enter file in which to save the key (/home/localname/.ssh/id_rsa):
     Enter passphrase (empty for no passphrase):
     Enter same passphrase again:
     Your identification has been saved in /home/localname/.ssh/id_rsa.
@@ -383,7 +379,7 @@ You will see the following output once you have completed that step::
     Key has comment '/home/localname/.ssh/id_rsa'
     Enter new passphrase (empty for no passphrase):
     Enter same passphrase again:
-    Your identification has been saved with the new passphrase.  
+    Your identification has been saved with the new passphrase.
 
 
 Upload the key to the FutureGrid Portal
@@ -392,14 +388,14 @@ Upload the key to the FutureGrid Portal
 Next you need to upload the key to the portal. You must be logged into the portal to do so.
 
 
-.. list-table:: 
+.. list-table::
    :widths: 10 60 30
    :header-rows: 1
 
    * - Step
      - Description
      - Supporting Screensho
-   * - Step 1 
+   * - Step 1
      - Log into the portal
      - |image25|
    * - Step 2
@@ -420,9 +416,9 @@ Next you need to upload the key to the portal. You must be logged into the porta
        Make sure that when you paste your key, it does not contain
        newlines or carriage returns that may have been introduced by
        incorrect pasting and copying. If so, please remove them.
-     - 
-   
-     
+     -
+
+
 At this point you have uploaded your key. However you will still need
 to wait till all accounts have been set up to use the key, or if you
 did not have an account till it has been created by an
@@ -438,9 +434,9 @@ account before, you need to wait for up to two busisiness days so we
 can verify your identity and create the account. SO please wait.
 Otherwise, tseisting your new key is almost instanteneously on india.
 For other clusters like Hotel, it can take
-around 10 minutes to update the ssh keys. 
+around 10 minutes to update the ssh keys.
 
-To log into india simply type the usual ssh command such as:: 
+To log into india simply type the usual ssh command such as::
 
     $ ssh portalname@india.futuregrid.org
 
@@ -448,7 +444,7 @@ The first time you ssh into a machine you will see a message like this::
 
     The authenticity of host 'india.futuregrid.org (149.165.148.5)' can't be established.
     RSA key fingerprint is f8:96:15:b7:21:eb:64:92:6c:de:e0:79:f3:fb:86:dd.
-    Are you sure you want to continue connecting (yes/no)? yes 
+    Are you sure you want to continue connecting (yes/no)? yes
 
 You have to type yes and press enter. Than you will be logging into
 india. Other FutureGrid machines can be reached in the same
@@ -461,7 +457,7 @@ Testing your ssh key for Hotel
 After uploading your ssh key, it can take around 30 minutes to update
 the ssh keys of Hotel. So, if you were able to log onto India, you have
 set up properly your ssh key. So, after a while you will be able to log
-onto Hotel.  
+onto Hotel.
 
 If you placed the ssh key in the default location::
 
@@ -494,8 +490,9 @@ If you placed the ssh key in the default location::
 .. |image28| image:: /images/portalkeypaste_0.png
    :width: 200px
 
+.. comment::
 
-.. |info-image| image:: images/glyphicons_195_circle_info.png 
+   .. |info-image| image:: images/glyphicons_195_circle_info.png 
 
 See also
 https://github.com/cloudmesh/introduction_to_cloud_computing-old/blob/master/docs/source/accounts/ssh.rst

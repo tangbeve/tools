@@ -94,32 +94,3 @@ Make sure you typed in your password correctly. Double check CAPS LOCK
 
 Do not use passwords that are easy to guess
 
-Documentation Management
-------------------------
-
-Report Checklist
-^^^^^^^^^^^^^^^^^
-
-* [ ] is the report spell checked?
-* [ ] are you using **a** and **the** properly
-* in case of word: not using sections in word documents
-* in case of RST: not using underlines to indicate sections and
-  subsections
-* in case of RST: not using numbered sections. While LaTeX and word do
-  this for you automatically
-* not using bulleted lists in word
-* carelessly pasting and copying into the document without using
-  proper formats
-* Based on previous experience we requires that LaTeX and Word reporst
-  use the acm word/latex templates that can be downloaded fro the
-  net. No other format may be used
-* not leveraging parallel editing: onedrive allows you to
-  edit a word document in collaboration
-* github allows you to collaborate on latex documents
-* We do not accept google docs. However you can use it to develop
-  things that you may past and copy into your final report. We
-  observed that students that use google docs underestimate the lack
-  of structural document features and lack of 2 column format. Formats
-  written in google docs are typically of lower quality.
-  The acm template gives you guidance how to write a paper
-  properly. Including references.

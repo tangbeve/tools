@@ -88,7 +88,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">2. Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../cloudmesh/index.html">Cloudmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../devops/index.html">2.1. DevOps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">2.2. Docuumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">2.2. Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../iaas/index.html">2.3. Languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../management/index.html">2.4. Management</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">2.5. Languages</a><ul class="current">
@@ -165,37 +165,71 @@
 <h1>2.5.1.2. Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="classes">
 <h2>2.5.1.2.1. classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">dog</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+   <span class="k">def</span> <span class="nf">__init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+   <span class="nd">@staticmethod</span>
+   <span class="k">def</span> <span class="nf">bone</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+   <span class="k">def</span> <span class="nf">bread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+      <span class="k">print</span> <span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+       <span class="k">print</span> <span class="p">(</span><span class="n">args</span><span class="p">)</span>
+       <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;mamal&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>What is the difference between static and class methods?</li>
+<li>What are instances?</li>
+<li>Add a __main__</li>
+<li>Add some uses</li>
+<li>Come up with a better class that uses class, static and instance methods.</li>
+</ol>
 </div>
 <div class="section" id="dicts">
 <h2>2.5.1.2.2. dicts<a class="headerlink" href="#dicts" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dotdict">
+<h2>2.5.1.2.3. dotdict<a class="headerlink" href="#dotdict" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="docopts">
-<h2>2.5.1.2.3. docopts<a class="headerlink" href="#docopts" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.1.2.4. docopts<a class="headerlink" href="#docopts" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="hostlists">
-<h2>2.5.1.2.4. hostlists<a class="headerlink" href="#hostlists" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.1.2.5. hostlists<a class="headerlink" href="#hostlists" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="mysqlalchemy">
-<h2>2.5.1.2.5. mysqlalchemy<a class="headerlink" href="#mysqlalchemy" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.1.2.6. mysqlalchemy<a class="headerlink" href="#mysqlalchemy" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="django">
-<h2>2.5.1.2.6. django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.1.2.7. django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="cloudmesh-client-library">
-<h2>2.5.1.2.7. cloudmesh client library<a class="headerlink" href="#cloudmesh-client-library" title="Permalink to this headline">¶</a></h2>
+<h2>2.5.1.2.8. cloudmesh client library<a class="headerlink" href="#cloudmesh-client-library" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="console">
-<h3>2.5.1.2.7.1. Console<a class="headerlink" href="#console" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.1.2.8.1. Console<a class="headerlink" href="#console" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="util">
-<h3>2.5.1.2.7.2. Util<a class="headerlink" href="#util" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.1.2.8.2. Util<a class="headerlink" href="#util" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="common">
-<h3>2.5.1.2.7.3. Common<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.1.2.8.3. Common<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="printer">
-<h3>2.5.1.2.7.4. Printer<a class="headerlink" href="#printer" title="Permalink to this headline">¶</a></h3>
+<h3>2.5.1.2.8.4. Printer<a class="headerlink" href="#printer" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="just-enough-python-for-the-cloud">
-<h4>2.5.1.2.7.4.1. Just Enough Python for the Cloud<a class="headerlink" href="#just-enough-python-for-the-cloud" title="Permalink to this headline">¶</a></h4>
+<h4>2.5.1.2.8.4.1. Just Enough Python for the Cloud<a class="headerlink" href="#just-enough-python-for-the-cloud" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><a class="reference external" href="http://www.korokithakis.net/tutorials/python/">http://www.korokithakis.net/tutorials/python/</a></li>
 </ul>

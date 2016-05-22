@@ -32,7 +32,7 @@
   
     <link rel="top" title="Cloudmesh Tools Primer 0.1 documentation" href="../../index.html"/>
         <link rel="up" title="2.1. DevOps" href="index.html"/>
-        <link rel="next" title="2.2. Docuumentation" href="../doc/index.html"/>
+        <link rel="next" title="2.2. Documentation" href="../doc/index.html"/>
         <link rel="prev" title="2.1. DevOps" href="index.html"/> 
 
   
@@ -91,7 +91,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2.1.1. Ansible</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../doc/index.html">2.2. Docuumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/index.html">2.2. Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../iaas/index.html">2.3. Languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../management/index.html">2.4. Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../languages/index.html">2.5. Languages</a></li>
@@ -150,6 +150,40 @@
             
   <div class="section" id="ansible">
 <h1>2.1.1. Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">create instructions on how to use ansible-galaxy to create a new
+ansible project (see bellow, improve if needed)</p>
+</li>
+<li><p class="first">develop a simple playbook to install some software. Maybe we can do
+something like install sphinx and emacs</p>
+<p><a class="reference external" href="https://galaxy.ansible.com/intro#share">https://galaxy.ansible.com/intro#share</a></p>
+</li>
+</ol>
+<p>Create a ansible project</p>
+<pre class="highlight"><style type="text/css">
+span.prompt1:before {
+  content: "$ ";
+}
+</style><span class="prompt1">ansible-galaxy init myproject --force</span>
+</pre><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">myproject</span><span class="o">/</span>
+   <span class="o">.</span><span class="n">travis</span><span class="o">.</span><span class="n">yml</span>
+   <span class="n">README</span><span class="o">.</span><span class="n">md</span>
+   <span class="n">defaults</span><span class="o">/</span>
+   <span class="n">files</span><span class="o">/</span>
+   <span class="n">handlers</span><span class="o">/</span>
+   <span class="n">meta</span><span class="o">/</span>
+   <span class="n">tasks</span><span class="o">/</span>
+   <span class="n">templates</span><span class="o">/</span>
+   <span class="n">tests</span><span class="o">/</span>
+   <span class="nb">vars</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Than follow the instructions provided at</p>
+<ul class="simple">
+<li><a class="reference external" href="https://galaxy.ansible.com/intro#share">https://galaxy.ansible.com/intro#share</a></li>
+</ul>
+<p>However we do not follow the instructions to upload the repository to
+ansible-galaxy starting at the section <cite>Upload to Galaxy</cite></p>
 </div>
 
 
@@ -159,7 +193,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../doc/index.html" class="btn btn-neutral float-right" title="2.2. Docuumentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../doc/index.html" class="btn btn-neutral float-right" title="2.2. Documentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="2.1. DevOps" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

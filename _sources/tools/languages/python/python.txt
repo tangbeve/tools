@@ -6,8 +6,44 @@ Python
 classes
 -------
 
+.. code-block:: python
+
+   class dog(object):
+
+      def __init(self, args):
+         print(args)
+	 
+      @staticmethod
+      def bone(args):
+	 print(args)
+
+      def bread(self, args):
+         print (args)
+
+       @classmethod
+       def kind(cls, args):
+          print (args)
+	  print ("mamal")
+	  
+1. What is the difference between static and class methods?
+2. What are instances?
+3. Add a __main__
+4. Add some uses
+5. Come up with a better class that uses class, static and instance methods.
+
 dicts
 -----
+
+
+.. code-block:: python
+
+  d = {
+     "a": "value1",
+     "b": "value2",   
+  }
+
+dotdict
+-------
 
 docopts
 -------
