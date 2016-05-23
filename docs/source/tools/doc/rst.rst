@@ -243,11 +243,12 @@ in the text it will create a target to which the above link points when you clic
 Todo
 ----------------------------------------------------------------------
 
-::
+Sphinx ghas a convenient todo mechanism, that allows you to manage
+some todods directly within the rst documents. We use the following
+notation::
+   
+    .. todo:: Name, This what needs to be done? (This is our example)
 
-      .. todo:: an example
-
-.. todo:: an example
 
 Not quite WYSIWYG
 -----------------

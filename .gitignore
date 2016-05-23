@@ -1,3 +1,6 @@
+.DS*
+.#*
+.make
 *~
 .idea
 # Byte-compiled / optimized / DLL files

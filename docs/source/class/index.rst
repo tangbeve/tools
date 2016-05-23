@@ -8,5 +8,7 @@ Class
    :glob:
    :numbered:
 
+   syllabus
+   assignments
    mistakes
    report
