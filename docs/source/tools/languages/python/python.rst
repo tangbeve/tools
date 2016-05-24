@@ -302,9 +302,9 @@ serach function in pypi and say on the commandline::
     pip install <package_name>
 
 where pagage_name is the string name of the package. an example would
-be the package called fabric which you can install with::
+be the package called cloudmesh_client which you can install with::
 
-   pip install fabric
+   pip install cloudmesh_client
  
 If all goes well the package will be installed.
 
@@ -316,9 +316,9 @@ todo
 Excersises
 ==================
 
-her is the task i like you to do to reinforce the learning experience once you are done with the tutorial.
-
-#. write a program that uses loops over both x and y coordinates while x is in 1,2,3,4,5 and y is in 5,4,3,2,1 and prints the x and y coordinate
+#. write a program that uses loops over both x and y coordinates while
+   x is in 1,2,3,4,5 and y is in 5,4,3,2,1 and prints the x and y
+   coordinate
 
 #. write a program that sums up all values in x and y
 
@@ -328,8 +328,11 @@ her is the task i like you to do to reinforce the learning experience once you a
 
 #. provide a program that uses dicts
 
-#. read up on classes we will cover this in more detail  next week.
+#. read up on classes.
 
-  #.	we will create an icecream machine that produces icecream in with tiny flavor, medium flavor and large flavor. 
-  #.     in addition the icecream cone will be wrapped into some paper  that has an image on it. Images will be Penguin, Apple, Emperor, King
+#. we will create an icecream machine that produces icecream in
+   with tiny flavor, medium flavor and large flavor.
+	
+#. in addition the icecream cone will be wrapped into some paper that
+   has an image on it. Images will be Penguin, Apple, Emperor, King
 
