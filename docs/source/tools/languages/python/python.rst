@@ -128,25 +128,25 @@ For
 Classes
 -------
 
-.. code-block:: python
+.. runblock:: pycon
 
-   class dog(object):
+   >>> class dog(object):
+   ...
+   ...	 def __init__(self, args):
+   ...	   print(args)
+   ...
+   ...	 def bone(args):
+   ...	   print(args)
+   ...
+   ...	 def bread(self, args):
+   ...	   print (args)
+   ...
+   ...	 def kind(self, args):
+   ...	   print (args)
+   ...
+   ... print ("mamal")
 
-	  def __init(self, args):
-		 print(args)
-
-	  @staticmethod
-	  def bone(args):
-	 print(args)
-
-	  def bread(self, args):
-		 print (args)
-
-	   @classmethod
-	   def kind(cls, args):
-		  print (args)
-	  print ("mamal")
-	  
+   
 1. What is the difference between static and class methods?
 2. What are instances?
 3. Add a __main__
