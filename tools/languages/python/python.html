@@ -84,8 +84,8 @@
             
                 <p class="caption"><span class="caption-text">A. Introduction</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../accounts/index.html">1. Accounts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../class/index.html">2. Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../class/index.html">1. Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../accounts/index.html">2. Accounts</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">3. Tools</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../cloudmesh/index.html">Cloudmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../devops/index.html">3.1. DevOps</a></li>
@@ -96,9 +96,9 @@
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">3.5.1. Python</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="pycharm.html">3.5.1.1. PyCharm</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">3.5.1.2. Python</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#terminal">3.5.1.3. Terminal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#os-specific">3.5.1.4. OS Specific</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#lanaguage-features">3.5.1.5. Lanaguage Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lanaguage-features">3.5.1.3. Lanaguage Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#terminal">3.5.1.4. Terminal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#os-specific">3.5.1.5. OS Specific</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#local">3.5.1.6. Local</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ecosystem">3.5.1.7. Ecosystem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#excersises">3.5.1.8. Excersises</a></li>
@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../refcards/index.html">3.8. Refcards</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todo.html">4. ToDo</a></li>
 </ul>
 
             
@@ -164,23 +165,181 @@
             
   <div class="section" id="python">
 <h1>3.5.1.2. Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="lanaguage-features">
+<h1>3.5.1.3. Lanaguage Features<a class="headerlink" href="#lanaguage-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="print">
+<h2>3.5.1.3.1. Print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s2">&quot;Hello Cloud&quot;</span>
+<span class="go">Hello Cloud</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comments">
+<h2>3.5.1.3.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simple-comment">
+<h3>3.5.1.3.2.1. Simple comment<a class="headerlink" href="#simple-comment" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># this is a comment</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiline-comment-with">
+<h3>3.5.1.3.2.2. Multiline Comment with &#8220;<a class="headerlink" href="#multiline-comment-with" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">this is a multiline coment</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>3.5.1.3.2.3. Multiline Comment with &#8216;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">this is a multiline coment</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="variables">
+<h2>3.5.1.3.3. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flavor</span> <span class="o">=</span> <span class="s2">&quot;tiny&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">flavor</span>
+<span class="go">tiny</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-the-variable-value">
+<h2>3.5.1.3.4. Changing the variable Value<a class="headerlink" href="#changing-the-variable-value" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flavor</span> <span class="o">=</span> <span class="s2">&quot;large&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">flavor</span>
+<span class="go">large</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>3.5.1.3.5. List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">list</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="go">[3, 4, 5]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-loop">
+<h2>3.5.1.3.6. For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="k">print</span> <span class="n">element</span>
+<span class="gp">... </span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+<span class="go">5</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arithmetic-operators">
+<h2>3.5.1.3.7. Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">21</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">min</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">max</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+<span class="go">3.5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="function-to-do-calculations">
+<h2>3.5.1.3.8. Function to do calculations<a class="headerlink" href="#function-to-do-calculations" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">f</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">62</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functions-for-string-manipulation">
+<h2>3.5.1.3.9. Functions for String Manipulation<a class="headerlink" href="#functions-for-string-manipulation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">reversename</span><span class="p">(</span><span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">lastname</span><span class="p">,</span> <span class="n">firstname</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">name</span><span class="p">(</span><span class="s1">&#39;Gregor&#39;</span><span class="p">,</span> <span class="s1">&#39;von Laszewski&#39;</span><span class="p">)</span>
+<span class="go">Gregor von Laszewski</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">reversename</span><span class="p">(</span><span class="s1">&#39;Gregor&#39;</span><span class="p">,</span> <span class="s1">&#39;von Laszewski&#39;</span><span class="p">)</span>
+<span class="go">von Laszewski, Gregor</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-condition">
+<h2>3.5.1.3.10. If Condition<a class="headerlink" href="#if-condition" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flavor</span> <span class="o">=</span> <span class="s2">&quot;tiny&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">flavor</span> <span class="o">==</span> <span class="s2">&quot;tiny&quot;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;vanilla has a tiny flavor&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">elif</span> <span class="n">flavor</span> <span class="o">==</span> <span class="s2">&quot;large&quot;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;chocolate has a large flavor&quot;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span><span class="p">(</span><span class="s2">&quot;other flavors I do not like&quot;</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="go">vanilla has a tiny flavor</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for">
+<h2>3.5.1.3.11. For<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flavors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tiny&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;large&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">flavor</span> <span class="ow">in</span> <span class="n">flavors</span><span class="p">:</span>
+<span class="gp">... </span>  <span class="k">print</span> <span class="n">flavor</span>
+<span class="gp">... </span>
+<span class="go">tiny</span>
+<span class="go">medium</span>
+<span class="go">large</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="classes">
-<h2>3.5.1.2.1. classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.3.12. Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">dog</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
-   <span class="k">def</span> <span class="nf">__init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+       <span class="k">def</span> <span class="nf">__init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+              <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+       <span class="nd">@staticmethod</span>
+       <span class="k">def</span> <span class="nf">bone</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
       <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
-   <span class="nd">@staticmethod</span>
-   <span class="k">def</span> <span class="nf">bone</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-      <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+       <span class="k">def</span> <span class="nf">bread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+              <span class="k">print</span> <span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
-   <span class="k">def</span> <span class="nf">bread</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-      <span class="k">print</span> <span class="p">(</span><span class="n">args</span><span class="p">)</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-       <span class="k">print</span> <span class="p">(</span><span class="n">args</span><span class="p">)</span>
+        <span class="nd">@classmethod</span>
+        <span class="k">def</span> <span class="nf">kind</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+               <span class="k">print</span> <span class="p">(</span><span class="n">args</span><span class="p">)</span>
        <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;mamal&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -193,44 +352,78 @@
 </ol>
 </div>
 <div class="section" id="dicts">
-<h2>3.5.1.2.2. dicts<a class="headerlink" href="#dicts" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
-<span class="p">}</span>
+<h2>3.5.1.3.13. dicts<a class="headerlink" href="#dicts" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>  <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">])</span>
+<span class="go">value1</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="dotdict">
-<h2>3.5.1.2.3. dotdict<a class="headerlink" href="#dotdict" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.3.14. dotdict<a class="headerlink" href="#dotdict" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/cloudmesh/client/blob/master/cloudmesh_client/common/dotdict.py">https://github.com/cloudmesh/client/blob/master/cloudmesh_client/common/dotdict.py</a></p>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cloudmesh_client.common.dotdict</span> <span class="kn">import</span> <span class="n">dotdict</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">dotdict</span><span class="p">({</span>
+<span class="gp">... </span>  <span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+<span class="gp">... </span>  <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+<span class="go">value1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">])</span>
+<span class="go">value1</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="docopts">
-<h2>3.5.1.2.4. docopts<a class="headerlink" href="#docopts" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.3.15. docopts<a class="headerlink" href="#docopts" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://docopt.org/">http://docopt.org/</a></li>
+<li><a class="reference external" href="https://github.com/docopt/docopt">https://github.com/docopt/docopt</a></li>
+</ul>
 </div>
 <div class="section" id="hostlists">
-<h2>3.5.1.2.5. hostlists<a class="headerlink" href="#hostlists" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.3.16. hostlists<a class="headerlink" href="#hostlists" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cloudmesh_client.common.hostlist</span> <span class="kn">import</span> <span class="n">Parameter</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">elements</span> <span class="o">=</span> <span class="n">Parameter</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="s2">&quot;gregor-[001-002,005-006]&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+<span class="go">[&#39;gregor-001&#39;, &#39;gregor-002&#39;, &#39;gregor-005&#39;, &#39;gregor-006&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="k">print</span> <span class="p">(</span><span class="n">element</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="go">gregor-001</span>
+<span class="go">gregor-002</span>
+<span class="go">gregor-005</span>
+<span class="go">gregor-006</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="mysqlalchemy">
-<h2>3.5.1.2.6. mysqlalchemy<a class="headerlink" href="#mysqlalchemy" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.3.17. mysqlalchemy<a class="headerlink" href="#mysqlalchemy" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="django">
-<h2>3.5.1.2.7. django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.3.18. django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="cloudmesh-client-library">
-<h2>3.5.1.2.8. cloudmesh client library<a class="headerlink" href="#cloudmesh-client-library" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="console">
-<h3>3.5.1.2.8.1. Console<a class="headerlink" href="#console" title="Permalink to this headline">¶</a></h3>
+<h2>3.5.1.3.19. cloudmesh client library<a class="headerlink" href="#cloudmesh-client-library" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cloudmesh_client.shell.console</span> <span class="kn">import</span> <span class="n">Console</span>
+<span class="gp">&gt;&gt;&gt; </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Console</span><span class="o">.</span><span class="n">ok</span><span class="p">(</span><span class="s2">&quot;everything works&quot;</span><span class="p">)</span>
+<span class="go">everything works</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Console</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;this is an error&quot;</span><span class="p">)</span>
+<span class="go">ERROR: this is an error</span>
+<span class="go">None</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Console</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;this is a message&quot;</span><span class="p">)</span>
+<span class="go">this is a message</span>
+</pre></div>
 </div>
-<div class="section" id="util">
-<h3>3.5.1.2.8.2. Util<a class="headerlink" href="#util" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="common">
-<h3>3.5.1.2.8.3. Common<a class="headerlink" href="#common" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="printer">
-<h3>3.5.1.2.8.4. Printer<a class="headerlink" href="#printer" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="just-enough-python-for-the-cloud">
-<h4>3.5.1.2.8.4.1. Just Enough Python for the Cloud<a class="headerlink" href="#just-enough-python-for-the-cloud" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><a class="reference external" href="http://www.korokithakis.net/tutorials/python/">http://www.korokithakis.net/tutorials/python/</a></li>
 </ul>
@@ -240,21 +433,19 @@
 </ul>
 </div>
 </div>
-</div>
-</div>
 <div class="section" id="terminal">
-<h1>3.5.1.3. Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">¶</a></h1>
+<h1>3.5.1.4. Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><a class="reference external" href="http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/">http://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/</a></li>
 </ul>
 </div>
 <div class="section" id="os-specific">
-<h1>3.5.1.4. OS Specific<a class="headerlink" href="#os-specific" title="Permalink to this headline">¶</a></h1>
+<h1>3.5.1.5. OS Specific<a class="headerlink" href="#os-specific" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="linux">
-<h2>3.5.1.4.1. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.5.1. Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="os-x">
-<h2>3.5.1.4.2. OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.5.2. OS X<a class="headerlink" href="#os-x" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">a</span>
 <span class="n">Darwin</span> <span class="n">pro</span><span class="o">-</span><span class="mf">2013.</span><span class="n">local</span> <span class="mf">12.3</span><span class="o">.</span><span class="mi">0</span> <span class="n">Darwin</span> <span class="n">Kernel</span> <span class="n">Version</span> <span class="mf">12.3</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span> <span class="n">Sun</span> <span class="n">Jan</span> <span class="mi">6</span> <span class="mi">22</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">10</span> <span class="n">PST</span> <span class="mi">2013</span><span class="p">;</span> <span class="n">root</span><span class="p">:</span><span class="n">xnu</span><span class="o">-</span><span class="mf">2050.22</span><span class="o">.</span><span class="mi">13</span><span class="o">~</span><span class="mi">1</span><span class="o">/</span><span class="n">RELEASE_X86_64</span> <span class="n">x86_64</span>
 </pre></div>
@@ -266,54 +457,8 @@
 </div>
 </div>
 <div class="section" id="windows">
-<h2>3.5.1.4.3. Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<h2>3.5.1.5.3. Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <p>todo</p>
-</div>
-</div>
-<div class="section" id="lanaguage-features">
-<h1>3.5.1.5. Lanaguage Features<a class="headerlink" href="#lanaguage-features" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="print">
-<h2>3.5.1.5.1. Print<a class="headerlink" href="#print" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="comments">
-<h2>3.5.1.5.2. Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">this is a multiline coment</span>
-<span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">this is a multiline coment</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="variables">
-<h2>3.5.1.5.3. Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="changing-the-variable-value">
-<h2>3.5.1.5.4. Changing the variable Value<a class="headerlink" href="#changing-the-variable-value" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="list">
-<h2>3.5.1.5.5. List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="for-loop">
-<h2>3.5.1.5.6. For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="arithmetic-operators">
-<h2>3.5.1.5.7. Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="function-to-do-calculations">
-<h2>3.5.1.5.8. Function to do calculations<a class="headerlink" href="#function-to-do-calculations" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="functions-for-string-manipulation">
-<h2>3.5.1.5.9. Functions for String Manipulation<a class="headerlink" href="#functions-for-string-manipulation" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="if-condition">
-<h2>3.5.1.5.10. If Condition<a class="headerlink" href="#if-condition" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="for">
-<h2>3.5.1.5.11. For<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 <div class="section" id="local">
