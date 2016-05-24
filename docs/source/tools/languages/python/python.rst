@@ -10,19 +10,19 @@ classes
 
    class dog(object):
 
-      def __init(self, args):
-         print(args)
-	 
-      @staticmethod
-      def bone(args):
+	  def __init(self, args):
+		 print(args)
+
+	  @staticmethod
+	  def bone(args):
 	 print(args)
 
-      def bread(self, args):
-         print (args)
+	  def bread(self, args):
+		 print (args)
 
-       @classmethod
-       def kind(cls, args):
-          print (args)
+	   @classmethod
+	   def kind(cls, args):
+		  print (args)
 	  print ("mamal")
 	  
 1. What is the difference between static and class methods?
@@ -42,14 +42,53 @@ dicts
      "b": "value2",   
   }
 
+print(d["a"])
+
 dotdict
 -------
+
+https://github.com/cloudmesh/client/blob/master/cloudmesh_client/common/dotdict.py
+
+
+.. code-block:: python
+
+	from cloudmesh_client.common.dotdict import dotdict
+
+	dd = dotdict(d)
+
+	print (dd.a)
 
 docopts
 -------
 
+* http://docopt.org/
+
+* https://github.com/docopt/docopt
+
+
 hostlists
 ---------
+
+.. code-block:: python
+
+	from cloudmesh_client.common.hostlist import Parameter
+
+	elements = Parameter.expand("gregor-[001-002,005-006]")
+
+	print (elements)
+
+	["gregor-001", "gregor-002", "gregor-005", "gregor-006"]
+
+	for element in elements:
+	    print (element)
+
+	gregor-001
+	gregor-002
+	gregor-005
+	gregor-006
+
+
+
 
 mysqlalchemy
 ------------
@@ -62,6 +101,12 @@ cloudmesh client library
 
 Console
 ^^^^^^^
+
+cloudmesh client
+
+* Console.ok
+* Console.error
+* Console.msg
 
 Util
 ^^^^
