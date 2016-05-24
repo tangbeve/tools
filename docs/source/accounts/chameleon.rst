@@ -36,11 +36,8 @@ Talk to your team leader about getting added to their project.
 They will need to know your username to add you to the project.
 
 
-.. note:: At time you may seethe following::
+.. note:: At times you may see the following error::
 
-                NOTICE
-                =========
-                502 Bad Gateway error
-                this seems to be common just use refresh and keep going.
+                502 Bad Gateway
 
-          You can refresh
+          this seems to be common just use refresh and keep going.
